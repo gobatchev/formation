@@ -1,0 +1,141 @@
+###############################################################################
+Mon Jul 13 11:00:02 CEST 2020
+
+Recherche du cours
+   https://openclassrooms.com/fr/courses/5801891-initiez-vous-au-deep-learning/5801898-decouvrez-le-neurone-formel
+      8h
+      certificat de réussite à la clef
+
+1. Découvrez le neurone formel
+
+   Le neurone biologique
+
+      RNN est sont des modèles mathématiques du neurone biologique
+
+      3 grandes entités
+         corps cellulaire
+            appelé péricaryon
+         ensemble de dentrites (~7000)
+            ce sont les capteurs du neurone
+            transmettent l'influx nerveux de leur extrémité au péricaryon
+               le flux est dit centripète
+         axone
+
+      cf Complete_neuron_cell_diagram_fr.svg.png
+
+      Qd exitation du corps cellulaire dépasse un seuil, exitation se fait par !!modulation de fréquence!!
+
+      Qd etremité de l'axone est en contact ac dentrite d'un autre neurone
+         la zone de contact est un !!synapse!!
+         permet transmition de donnée entre neurone
+         c'est un réseau
+
+
+   Le neurone formel
+
+      Appelé aussi !!perceptron!!
+                   !!neurone formel!!
+                   !!neurone artificiel!!
+
+      cf neuroneformel-1.png
+
+      Version simplifié du neurone bio
+
+      Les entrées
+         noté X
+         Représentent les dentrites
+      Les sorties
+         noté Y
+         représentent l'axome
+      paramètre noté w et b
+         influencent le comportement du neurone
+
+      !!Équation d'un neurone formel :!!
+         !!y^=f(⟨w,x⟩+b)!!
+         chaque entrée est multipliée par w (coef) puis sommées puis additionnées par un bias b. Puis le tout passe dans ue fonction de transfert (svt nn linéaire)
+         c'est une !!modulation d'amplitude!! et non de fréquence comme dans neurone bio
+
+   Apprentissage par descente de gradient
+      c'est chercher w et b
+      c'est l'optimisation d'une fonction de perte
+         on cherche w et b qui minimise cette fonction
+
+      Dans le cas de la classification la fonction de perte est
+         L(y^,y)=−(y.log(y^)+(1−y).log(1−y^))
+         Elle s'appelle log-vraisemblance négative
+         Quand tout est dérivable, on peut utiliser la descente de gradient
+            à chaque étape les paramètres sont déplacés de la manière suivante
+               ∂L/∂wi=(∂L/∂y)*f′(⟨w,x⟩+b)xi
+               cf linearsep_anim.gif
+
+   Si tu as le temps
+      https://fr.wikipedia.org/wiki/Perceptron
+
+   SumUp
+      neurone artificiel est inspiré neurone bio
+      Dans un model linéarement dérivable et de données linéarement séparable nous avons vu comment apprendre w et b via descente de gradient
+
+
+2. Explorez les réseaux de neurones en couches
+
+   Limitation du neurone formel
+
+      1 seul neurone ne peut pas résoudre pb complexe
+         exemple : lorque les dataset ne puevent pas être séparées par une droite
+
+
+   Mettre plusieurs neurones en réseau
+
+     réseaux particuliers organisés en couches
+        réseau multicouche
+           cf reseau_multicouche.png
+           le flux va tjs de Entrées vers Sorties
+           Adapté pour data de taille fixe (comme image)
+           Appelé : perceptron multicouche (PMC),
+                    Feed-Forward
+                    Multi Layer Perceptron (MLP)
+        Réseau récurent
+           cf resau_reccurent_rnn.png
+           Apprentissage complex, on le verra plus tard
+           Adaptée pour data de taille variable
+
+   Organisation en une couche
+      cf unecoucheisolée-1.png
+      Sj=∑Wji*xi
+      yj=f(Sj)
+         où Wji représente la pondération entre l'entrée i et la sortie j.
+         On a remplacé le biais b à l'aide d'une fausse entrée qui reste constante à la valeur 1.
+             Ainsi,  Wj0 correspond au biais bj du neurone j.
+
+      !!W forme une matrice contenant les paramètres de la couche!!
+
+   Comment apprendre un réseau à une seule couche ?
+      Descente de gradient
+         ∂L/∂wj=(∂L/∂yj)*(∂yj/∂Sj)*(∂Sj/∂wji)
+         ∂L/∂wj=(∂L/∂yj)*f′(Sj)xi
+
+   Organisation en plusieurs couches
+      On connecte la sortie de la couche n à l'entrée de la couche n+1
+
+      S(l)=∑W(l)ji*I(l)i
+      O(l)j=f(l)*(S(l)j)→I(l+1)
+         Avec O la sortie
+              I l'entrée
+              (l) le numéro de la couche
+
+   Rétropropagation du gradient
+      Pour l'apprentissage du réseau
+      Comment faire
+         calculer le gradient des parametres de la derniere couche
+         puis porpager jusqu'à la premiere de proche en proche
+
+   Si tu as le temps
+      https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_artificiels
+      https://web.stanford.edu/~hastie/Papers/ESLII.pdf
+
+   SumUp
+      un neurone isolé ne peut pas résoudre de problème linéairement séparable.
+      Il faut pour cela regrouper plusieurs neurones entre eux dans un réseau de neurones artificiels.
+      Nous avons différents types de réseaux possibles
+      les réseaux de neurones en couches dits perceptrons multicouches.
+          apprentissage par un algorithme particulier, la rétropropagation du gradient
