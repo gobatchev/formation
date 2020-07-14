@@ -1,0 +1,54 @@
+###############################################################################
+Tue Jul 14 09:19:09 CEST 2020
+
+Recherche du cours
+      https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/230659-decouvrez-python
+      40h
+      certificat de réussite à la clef
+
+
+1. Découvrez le python
+    python language interprété et non compilé
+
+2. Faites vos premier pas avec l'interpreteur
+3. Les variables
+4. Structures conditionnelles
+
+5.Les boucles
+    if
+    while
+    break (use with precautious)
+    continue
+        permet de continuer la boucle sans executer ce qu'il y a en dessous
+
+6. Modularité (1/2)
+    fonction avec valeur par défault
+        def example(a=1):
+        On peut créer des !!docstring!!, c'est une explication qui sort lorsque l'on fera help(fonction)
+            s'écrit juste en dessous de la fonction :""" ceci est une docstring """
+    !!lambda!!
+        fonction courte limité à une exec
+        f = lambda x: x * x
+        f(5)
+        #return 25
+    Modules
+        la fonction help pour connaitre les fonctions du module
+        import XXXXX
+            faire XXXXXX.FFFFFF (FFFFFF est une fonction)
+        import XXXXX as YYYYYY (changer le nom du module)
+            faire YYYYYY.FFFFFF
+        from XXXXXX import FFFFFF (importer seulement une fonction du module)
+            avec le from pas besoin de faire XXXXXX.FFFFFF mais seulement FFFFFF
+
+7. Modularité (2/2)
+    Dans un fichier mettre en préambule #!/usr/bin/python3.6
+                                        # -*-coding:utf-8 -*
+    Créer ces propres modules
+        on peut faire les import de ces modules
+        if __name__ == "__main__" permet de lancer le code si le module est lancer directement
+
+    Les packages
+        regroupement de plusieurs modules
+        se sont juste des repertoires
+
+8. Gérez les exceptions
