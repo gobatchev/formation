@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1594805003 source:/home/kebab/Documents/formation_chomage_072020/c/formation/cours_project/open_classromm/main.c
+	<stdio.h>
+	<stdlib.h>
+

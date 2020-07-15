@@ -6,4 +6,80 @@ Recherche du cours
       XXh
       certificat de réussite à la clef
 
+Les bases de la programmation en C
+    1. Vous avez dit programmer ?
+    2. Ayez les bons outils !
+    3. Votre premier programme
+    4. Un monde de variables
+    5. Une bête de calcul
+    6. Les conditions
+    7. Les boucles
+    8. TP : Plus ou Moins, votre premier jeu
+    9. Les fonctions
+    10. Entraînez-vous à améliorer le jeu du "plus ou moins"
+
+Techniques « avancées » du langage C
+     1. La programmation modulaire
+          Le prototype
+               Déclarer les prototypes en début de code pour pouvoir appeler les fonctions dans n'importequel ordre
+               la forme : double aireRectangle(double, double);
+
+          Les headers
+               fichier .h qui contiennent les prototypes
+               #include "jeu.h" dans les includes du .c
+
+          les Includes
+              On uilise des <> pour include fichier dans l'IDE
+              On utilise "" pour include fichier dans le projet
+
+          La compilation séparée
+              Dans l'ordre preprocesseur-->compilateur-->linker
+
+              Preprocesseur
+                  démarre avant la compilation
+                  exécute les lignes avec un # (instructions spéciales)
+              Compilation
+                  transformer vos fichiers source en code binaire
+                  compile chaque fichier.c un à un
+                  Génere fichiers .o (les binaires)
+              Linker
+                  Link les fichier .o ensemble
+                  Gère les bibliothèque aussi
+
+          Les variables
+              Globales
+                  accessible partout
+                  Déclarées en dessous des includes
+                  static global signfie global mais que dans le fichier
+              Static
+                  la fonction n'est pas supprimé apres l'exec de la fonction
+                  La prochaine fois qu'on appellera la fonction, la variable aura conservé sa valeur
+
+          Les fonction static
+              Si on veut qu'une fonction ne soit accessible que dans le fichier dans lequel elle se trouve, il faut rajouter le mot-clé static devant
+
+
+     2. À l'assaut des pointeurs
+          Initialiser un pointeur
+              int *monPointeur = NULL;
+
+          sur une variable, comme la variable age:
+              age signifie : « Je veux la valeur de la variable age»,
+              &age signifie : « Je veux l'adresse à laquelle se trouve la variable age» ;
+          sur un pointeur, comme pointeurSurAge:
+              pointeurSurAge signifie : « Je veux la valeur de pointeurSurAge» (cette valeur étant une adresse),
+              *pointeurSurAge signifie : « Je veux la valeur de la variable qui se trouve à l'adresse contenue dans pointeurSurAge».
+
+
+     3. Les tableaux
+     3. Les chaînes de caractères
+     4. Le préprocesseur
+     5. Créez vos propres types de variables
+     6. Lire et écrire dans des fichiers
+     7. L'allocation dynamique
+     8. TP : réalisation d'un Pendu
+     9. La saisie de texte sécurisée
+     10. Apprenez à expliquer les pointeurs
+
+
 
