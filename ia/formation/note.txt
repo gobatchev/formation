@@ -139,3 +139,65 @@ Recherche du cours
       Nous avons différents types de réseaux possibles
       les réseaux de neurones en couches dits perceptrons multicouches.
           apprentissage par un algorithme particulier, la rétropropagation du gradient
+
+3. Initiez-vous aux autoencodeurs
+   Architecture diabolo
+      cf reseau_diabolo.png
+
+      Compression/décompression de données
+         encodeur
+            prend les données en grande dimension et les compresse vers une plus petite dimension
+         decodeur
+            prend les données en petite dimension et les rétroprojette vers la plus grande dimension
+         La valeur centrale est appelé !!h!!
+         auto encodeur (AE)
+            réseau dont la cible est l'entrée elle-même
+
+      Apprentissage autoencoder
+         rétropropagation du gradient
+
+      Under/over complete
+         2 types d'AE
+            under complete
+               nb unités centrales < nb unités d'entrée
+               Pour réduction de dimension
+            over-complete
+               nb unités centrales > nb unités d'entrée
+               ils cherchent une meilleure représentation des données pour un traitement ultérieur
+                  correspond à la projection dans une plus grande dimension des SVM
+                     SVM = Machine a vecteur de support ou Support vector machine
+         chacun à ses particularités d'apprentissage
+
+      Débruitage avec les autoencodeurs (under-complete)
+         Améliorer apprentissage des under complete en rajoutant perturbation à l'entrée
+
+      Prévenir la coadaptation sur les autoencodeurs (over-complete)
+         Danger de tomber sur des solutions trivila
+            recopier l'info de couche en couche
+         Pour éviter cela, on deco ALEATOIREMENT des neurones de la représentation intermédiaire
+
+       --> C'est du deep learning
+
+
+   Réseaux profonds (données brutes vs caractéristiques)
+      La phase d'extraction et classification des caractéristiques est dynamique
+      On finit l'apprentissage de toutes les couches (y compris la première) par un apprentissage supervisé classique appelé !!fine-tuning!!.
+
+   Problématique du gradient évanescent liée aux réseaux profonds
+      Plus on rajoute de couche, plus apprentissage par retropropagation du gradient est difficile
+      Focntion de transfert de tanh est très faible <-4 et >4
+          On appelle ca le gradient vanishing (ou grandient evanescent)
+
+   SumUp
+      forme spéciale de réseau de neurones en couches
+         autoencodeur, ou réseau diabolo
+            adaptée à une tâche d'apprentissage non supervisé
+               réduction de dimension
+            effectue extraction de caractéristiques
+
+         extraction de caractéristiques utile pour apprentissage profond
+
+         apprentissage profond
+            le NN attaque data brute
+            Mais apprentissage difficil car vanishing gradient
+
