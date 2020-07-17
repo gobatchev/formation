@@ -201,3 +201,142 @@ Recherche du cours
             le NN attaque data brute
             Mais apprentissage difficil car vanishing gradient
 
+
+4. Construisez des réseaux profonds grâce aux couches convolutionnelles
+
+   Problématiques liées aux réseaux profonds
+      vanishing gradient
+      n'arrive pas à atteindre les couches basses pour faire apprentissage
+
+   la topologie des données
+      utiliser des filtres
+         masque de convolution
+         on balaye l'image avec le masque
+
+   Couche convolutionnelle (principe)
+      image d'entrée --> masque convolutionnel --> Carte de caractéristique de sortie
+      avantage : réduit le nombre de paramètre
+         !!RÉDUIT LE GRADIENT ÉVANESCENT!!
+      revient à ne conserver que certains poids d'une couche fully connected d'un RN
+
+   Architecture globale d’un réseau convolutionnel
+
+      Pour la classification le NN se termine par 1 ou plusieurs couches fully connected
+         cf schema_convcomplet.png
+
+      COUCHES CONVOLUTIONNELLES
+         Peuvent ê empilées pr former un réseau
+         accompagnées de couches de !!pooling!!
+                      de couches de !!batch normalization!!
+         Fonction d'activation
+            fonction !!relu!! ou !!softmax!!
+               fonction sans palier
+                  pour eviter saturation
+                  pour diminuer evanescence gradient
+                cf softmax.png
+
+         Cartes multiples
+            N filtre = N cartes de sortie
+
+      COUCHE POOLING
+         permettent de réduire la taille des cartes de caractéristiques
+         rééchantillonage des données
+            utilisant la moyenne ou le max
+
+      COUCHE BATCH NOMALIZATION
+         effectuent un recentrage et une normalisation des donées
+         autre technique de réduction du gradiant evanescent
+         permet de maintenir les batch près de 0
+            éviter saturation
+         tanh est une bonne fonction
+
+   Réseaux disponibles (AlexNet, VGG...)
+
+   Transfer Learning
+      Peuvent être utilisé comme initialisation
+      Losque nb d'exemple n'est pas suffisant
+
+   SumUp
+      Pb du réseau de neurones profond : gradient évanescent
+      Solution (notamment sur la modalité image) : réseaux convolutionnels
+      Principe important
+         masque de convolution
+         fonction d'activation spécifique
+         pooling
+         batch normalization
+
+
+5. Modèles génératifs grâce aux réseaux de neurones
+
+   Qu’est-ce qu’un modèle profond génératif (sans vraisemblance) ?
+      Likelihood-free Deep Generative Model
+      Décodeur d'un autoencoder (AE) comme modèle générateur
+         On utilise un AE entrainé sur une base d'image
+         on garde juste la partie decodeur
+         on tire un code z au hasard
+         et on le passe au décodeur
+            pb : on risque d'avoir une image peu réaliste (on ne connait pas la distribution)
+            soluce : Variational Auto-Encoder pour réduire la distribution lors de l'apprentissage
+
+   Apprentissage adverse, ou Generative Adversarial Network (GAN)
+      Autre méthode
+
+      basé sur 2 réseaux
+         un générateur
+            créer exemple à partir d'un code tiré sur distribution aléatoire connue
+            essaie de tromper le discriminateur
+         un Discriminateur
+            determine si l'exemple est réel ou synthétique
+            essaie de déterminer au mieux la provenance des exemples
+
+      Les 2 réseau sont regroupés en 1 seul réseau appelé GAN
+         cf schema_gan.png
+
+   Objectif d'un GAN
+      cf formula : Gan_objective.png
+      Le discriminateur minimise V(ω,θ) sur ω à θ fixé.
+      Le générateur maximise V(ω,θ) sur θ à ω fixé.
+      Point d'équilibre : !!équilibre de Nash!!
+
+   Exemple GAN autoencoder
+      On peut aussi construire une architecture combinée entre GAN et AE :
+         Cela permet des manipulations dans cet espace latent
+            ex : morphing
+
+   Tout l'univers des GAN
+      Colorisation d'image
+      cartographie
+      Inpaintin
+
+   SumUp
+      apprentissage adverse
+           synthetise exemple artificiels
+           performant sur la modalité image
+           association avec AE(autoencodeur) on peut faire du morphing ou inpainting
+              via manipulation sur l'espace latent des données
+
+Quiz
+   Quel est le rôle des dendrites dans un neurone biologique ?
+      Elles servent de capteurs au neurone
+   Comment sont modifiés les poids ou paramètres d'un neurone pour l'adapter à un problème donné ?
+      On utilise un algorithme d'optimisation du type descente de gradient.
+   Citer un exemple de problème qui ne peut être résolu par un seul neurone.
+      Reproduire la fonction ou exclusif ou xor.
+   On apprend un réseau de neurones en couche par rétropropagation du gradient. Dans quel sens doit-on apprendre les poids ?
+      De la sortie vers l'entrée.
+   À quel type d'apprentissage est adapté un réseau diabolo ?
+      L'apprentissage non supervisé.
+   Quelles sont les étapes réalisées en interne par un réseau de neurones profond ?
+      Extraction de caractéristiques.
+      Classification ou régression.
+   Quel le nombre de paramètres (poids et biais) d'une couche qui a 20 entrées et 10 sorties ?
+      !!210!! car 20*10 + 1*10 (!!les bias!!)
+   Quelle couche permet de réduire la taille d'une carte de caractéristiques ?
+      Couche de pooling.
+   Quels sont les réseaux associés à un Generative Adversarial Network (GAN) ?
+      Le discriminateur.
+      Le générateur.
+   Quel est le nom de l'équilibre obtenu à l'optimalité lors de l'apprentissage d'un GAN ?
+      Nash.
+
+
