@@ -72,14 +72,36 @@ Techniques « avancées » du langage C
 
 
      3. Les tableaux
-     3. Les chaînes de caractères
-     4. Le préprocesseur
-     5. Créez vos propres types de variables
-     6. Lire et écrire dans des fichiers
-     7. L'allocation dynamique
-     8. TP : réalisation d'un Pendu
-     9. La saisie de texte sécurisée
-     10. Apprenez à expliquer les pointeurs
+          Les tableaux dans la mémoire
+              tableau est un pointeur
+              utilisation des cases mémoires continues
+          Définir un tableau
+              int tableau[4];
+          Les tableaux à taille dynamique
+              !!allocation dynamique!!
+          Parcourir un tableau
+              for (i = 0 ; i < 4 ; i++)
+              {
+                  printf("%d\n", tableau[i]);
+              }
+          Initialiser un tableau
+              int tableau[4] = {0};
+          Passage de tableaux à une fonction
+              void affiche(int tableau[], int tailleTableau)
+              void affiche(int *tableau, int tailleTableau)
+          Exercices :
+             cf exercice_tableau/
+
+     4. Les chaînes de caractères
+          char chaine[];
+          printf("toto : %s", chaine);
+     5. Le préprocesseur
+     6. Créez vos propres types de variables
+     7. Lire et écrire dans des fichiers
+     8. L'allocation dynamique
+     9. TP : réalisation d'un Pendu
+     10. La saisie de texte sécurisée
+     11. Apprenez à expliquer les pointeurs
 
 
 
