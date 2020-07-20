@@ -6,337 +6,438 @@ Recherche du cours
       8h
       certificat de réussite à la clef
 
-1. Découvrez le neurone formel
+A. Identifiez les principes de base des réseaux de neurones artificiels
+   1. Découvrez le neurone formel
 
-   Le neurone biologique
+      Le neurone biologique
 
-      RNN est sont des modèles mathématiques du neurone biologique
+         RNN est sont des modèles mathématiques du neurone biologique
 
-      3 grandes entités
-         corps cellulaire
-            appelé péricaryon
-         ensemble de dentrites (~7000)
-            ce sont les capteurs du neurone
-            transmettent l'influx nerveux de leur extrémité au péricaryon
-               le flux est dit centripète
-         axone
+         3 grandes entités
+            corps cellulaire
+               appelé péricaryon
+            ensemble de dentrites (~7000)
+               ce sont les capteurs du neurone
+               transmettent l'influx nerveux de leur extrémité au péricaryon
+                  le flux est dit centripète
+            axone
 
-      cf Complete_neuron_cell_diagram_fr.svg.png
+         cf Complete_neuron_cell_diagram_fr.svg.png
+
+         Qd exitation du corps cellulaire dépasse un seuil, exitation se fait par !!modulation de fréquence!!
 
-      Qd exitation du corps cellulaire dépasse un seuil, exitation se fait par !!modulation de fréquence!!
+         Qd etremité de l'axone est en contact ac dentrite d'un autre neurone
+            la zone de contact est un !!synapse!!
+            permet transmition de donnée entre neurone
+            c'est un réseau
 
-      Qd etremité de l'axone est en contact ac dentrite d'un autre neurone
-         la zone de contact est un !!synapse!!
-         permet transmition de donnée entre neurone
-         c'est un réseau
+
+      Le neurone formel
+
+         Appelé aussi !!perceptron!!
+                      !!neurone formel!!
+                      !!neurone artificiel!!
+
+         cf neuroneformel-1.png
+
+         Version simplifié du neurone bio
+
+         Les entrées
+            noté X
+            Représentent les dentrites
+         Les sorties
+            noté Y
+            représentent l'axome
+         paramètre noté w et b
+            influencent le comportement du neurone
+
+         !!Équation d'un neurone formel :!!
+            !!y^=f(⟨w,x⟩+b)!!
+            chaque entrée est multipliée par w (coef) puis sommées puis additionnées par un bias b. Puis le tout passe dans ue fonction de transfert (svt nn linéaire)
+            c'est une !!modulation d'amplitude!! et non de fréquence comme dans neurone bio
+
+      Apprentissage par descente de gradient
+         c'est chercher w et b
+         c'est l'optimisation d'une fonction de perte
+            on cherche w et b qui minimise cette fonction
+
+         Dans le cas de la classification la fonction de perte est
+            L(y^,y)=−(y.log(y^)+(1−y).log(1−y^))
+            Elle s'appelle log-vraisemblance négative
+            Quand tout est dérivable, on peut utiliser la descente de gradient
+               à chaque étape les paramètres sont déplacés de la manière suivante
+                  ∂L/∂wi=(∂L/∂y)*f′(⟨w,x⟩+b)xi
+                  cf linearsep_anim.gif
+
+      Si tu as le temps
+         https://fr.wikipedia.org/wiki/Perceptron
+
+      SumUp
+         neurone artificiel est inspiré neurone bio
+         Dans un model linéarement dérivable et de données linéarement séparable nous avons vu comment apprendre w et b via descente de gradient
+
+
+   2. Explorez les réseaux de neurones en couches
+
+      Limitation du neurone formel
+
+         1 seul neurone ne peut pas résoudre pb complexe
+            exemple : lorque les dataset ne puevent pas être séparées par une droite
+
+
+      Mettre plusieurs neurones en réseau
+
+        réseaux particuliers organisés en couches
+           réseau multicouche
+              cf reseau_multicouche.png
+              le flux va tjs de Entrées vers Sorties
+              Adapté pour data de taille fixe (comme image)
+              Appelé : perceptron multicouche (PMC),
+                       Feed-Forward
+                       Multi Layer Perceptron (MLP)
+           Réseau récurent
+              cf resau_reccurent_rnn.png
+              Apprentissage complex, on le verra plus tard
+              Adaptée pour data de taille variable
+
+      Organisation en une couche
+         cf unecoucheisolée-1.png
+         Sj=∑Wji*xi
+         yj=f(Sj)
+            où Wji représente la pondération entre l'entrée i et la sortie j.
+            On a remplacé le biais b à l'aide d'une fausse entrée qui reste constante à la valeur 1.
+                Ainsi,  Wj0 correspond au biais bj du neurone j.
+
+         !!W forme une matrice contenant les paramètres de la couche!!
+
+      Comment apprendre un réseau à une seule couche ?
+         Descente de gradient
+            ∂L/∂wj=(∂L/∂yj)*(∂yj/∂Sj)*(∂Sj/∂wji)
+            ∂L/∂wj=(∂L/∂yj)*f′(Sj)xi
+
+      Organisation en plusieurs couches
+         On connecte la sortie de la couche n à l'entrée de la couche n+1
+
+         S(l)=∑W(l)ji*I(l)i
+         O(l)j=f(l)*(S(l)j)→I(l+1)
+            Avec O la sortie
+                 I l'entrée
+                 (l) le numéro de la couche
+
+      Rétropropagation du gradient
+         Pour l'apprentissage du réseau
+         Comment faire
+            calculer le gradient des parametres de la derniere couche
+            puis porpager jusqu'à la premiere de proche en proche
+
+      Si tu as le temps
+         https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_artificiels
+         https://web.stanford.edu/~hastie/Papers/ESLII.pdf
+
+      SumUp
+         un neurone isolé ne peut pas résoudre de problème linéairement séparable.
+         Il faut pour cela regrouper plusieurs neurones entre eux dans un réseau de neurones artificiels.
+         Nous avons différents types de réseaux possibles
+         les réseaux de neurones en couches dits perceptrons multicouches.
+             apprentissage par un algorithme particulier, la rétropropagation du gradient
+
+   3. Initiez-vous aux autoencodeurs
+      Architecture diabolo
+         cf reseau_diabolo.png
+
+         Compression/décompression de données
+            encodeur
+               prend les données en grande dimension et les compresse vers une plus petite dimension
+            decodeur
+               prend les données en petite dimension et les rétroprojette vers la plus grande dimension
+            La valeur centrale est appelé !!h!!
+            auto encodeur (AE)
+               réseau dont la cible est l'entrée elle-même
+
+         Apprentissage autoencoder
+            rétropropagation du gradient
+
+         Under/over complete
+            2 types d'AE
+               under complete
+                  nb unités centrales < nb unités d'entrée
+                  Pour réduction de dimension
+               over-complete
+                  nb unités centrales > nb unités d'entrée
+                  ils cherchent une meilleure représentation des données pour un traitement ultérieur
+                     correspond à la projection dans une plus grande dimension des SVM
+                        SVM = Machine a vecteur de support ou Support vector machine
+            chacun à ses particularités d'apprentissage
+
+         Débruitage avec les autoencodeurs (under-complete)
+            Améliorer apprentissage des under complete en rajoutant perturbation à l'entrée
+
+         Prévenir la coadaptation sur les autoencodeurs (over-complete)
+            Danger de tomber sur des solutions trivila
+               recopier l'info de couche en couche
+            Pour éviter cela, on deco ALEATOIREMENT des neurones de la représentation intermédiaire
+
+          --> C'est du deep learning
+
+
+      Réseaux profonds (données brutes vs caractéristiques)
+         La phase d'extraction et classification des caractéristiques est dynamique
+         On finit l'apprentissage de toutes les couches (y compris la première) par un apprentissage supervisé classique appelé !!fine-tuning!!.
+
+      Problématique du gradient évanescent liée aux réseaux profonds
+         Plus on rajoute de couche, plus apprentissage par retropropagation du gradient est difficile
+         Focntion de transfert de tanh est très faible <-4 et >4
+             On appelle ca le gradient vanishing (ou grandient evanescent)
+
+      SumUp
+         forme spéciale de réseau de neurones en couches
+            autoencodeur, ou réseau diabolo
+               adaptée à une tâche d'apprentissage non supervisé
+                  réduction de dimension
+               effectue extraction de caractéristiques
+
+            extraction de caractéristiques utile pour apprentissage profond
+
+            apprentissage profond
+               le NN attaque data brute
+               Mais apprentissage difficil car vanishing gradient
+
+
+   4. Construisez des réseaux profonds grâce aux couches convolutionnelles
+
+      Problématiques liées aux réseaux profonds
+         vanishing gradient
+         n'arrive pas à atteindre les couches basses pour faire apprentissage
+
+      la topologie des données
+         utiliser des filtres
+            masque de convolution
+            on balaye l'image avec le masque
+
+      Couche convolutionnelle (principe)
+         image d'entrée --> masque convolutionnel --> Carte de caractéristique de sortie
+         avantage : réduit le nombre de paramètre
+            !!RÉDUIT LE GRADIENT ÉVANESCENT!!
+         revient à ne conserver que certains poids d'une couche fully connected d'un RN
+
+      Architecture globale d’un réseau convolutionnel
+
+         Pour la classification le NN se termine par 1 ou plusieurs couches fully connected
+            cf schema_convcomplet.png
+
+         COUCHES CONVOLUTIONNELLES
+            Peuvent ê empilées pr former un réseau
+            accompagnées de couches de !!pooling!!
+                         de couches de !!batch normalization!!
+            Fonction d'activation
+               fonction !!relu!! ou !!softmax!!
+                  fonction sans palier
+                     pour eviter saturation
+                     pour diminuer evanescence gradient
+                   cf softmax.png
+
+            Cartes multiples
+               N filtre = N cartes de sortie
+
+         COUCHE POOLING
+            permettent de réduire la taille des cartes de caractéristiques
+            rééchantillonage des données
+               utilisant la moyenne ou le max
+
+         COUCHE BATCH NOMALIZATION
+            effectuent un recentrage et une normalisation des donées
+            autre technique de réduction du gradiant evanescent
+            permet de maintenir les batch près de 0
+               éviter saturation
+            tanh est une bonne fonction
+
+      Réseaux disponibles (AlexNet, VGG...)
+
+      Transfer Learning
+         Peuvent être utilisé comme initialisation
+         Losque nb d'exemple n'est pas suffisant
+
+      SumUp
+         Pb du réseau de neurones profond : gradient évanescent
+         Solution (notamment sur la modalité image) : réseaux convolutionnels
+         Principe important
+            masque de convolution
+            fonction d'activation spécifique
+            pooling
+            batch normalization
+
+
+   5. Modèles génératifs grâce aux réseaux de neurones
+
+      Qu’est-ce qu’un modèle profond génératif (sans vraisemblance) ?
+         Likelihood-free Deep Generative Model
+         Décodeur d'un autoencoder (AE) comme modèle générateur
+            On utilise un AE entrainé sur une base d'image
+            on garde juste la partie decodeur
+            on tire un code z au hasard
+            et on le passe au décodeur
+               pb : on risque d'avoir une image peu réaliste (on ne connait pas la distribution)
+               soluce : Variational Auto-Encoder pour réduire la distribution lors de l'apprentissage
+
+      Apprentissage adverse, ou Generative Adversarial Network (GAN)
+         Autre méthode
+
+         basé sur 2 réseaux
+            un générateur
+               créer exemple à partir d'un code tiré sur distribution aléatoire connue
+               essaie de tromper le discriminateur
+            un Discriminateur
+               determine si l'exemple est réel ou synthétique
+               essaie de déterminer au mieux la provenance des exemples
+
+         Les 2 réseau sont regroupés en 1 seul réseau appelé GAN
+            cf schema_gan.png
+
+      Objectif d'un GAN
+         cf formula : Gan_objective.png
+         Le discriminateur minimise V(ω,θ) sur ω à θ fixé.
+         Le générateur maximise V(ω,θ) sur θ à ω fixé.
+         Point d'équilibre : !!équilibre de Nash!!
+
+      Exemple GAN autoencoder
+         On peut aussi construire une architecture combinée entre GAN et AE :
+            Cela permet des manipulations dans cet espace latent
+               ex : morphing
+
+      Tout l'univers des GAN
+         Colorisation d'image
+         cartographie
+         Inpaintin
+
+      SumUp
+         apprentissage adverse
+              synthetise exemple artificiels
+              performant sur la modalité image
+              association avec AE(autoencodeur) on peut faire du morphing ou inpainting
+                 via manipulation sur l'espace latent des données
+
+   Quiz
+      Quel est le rôle des dendrites dans un neurone biologique ?
+         Elles servent de capteurs au neurone
+      Comment sont modifiés les poids ou paramètres d'un neurone pour l'adapter à un problème donné ?
+         On utilise un algorithme d'optimisation du type descente de gradient.
+      Citer un exemple de problème qui ne peut être résolu par un seul neurone.
+         Reproduire la fonction ou exclusif ou xor.
+      On apprend un réseau de neurones en couche par rétropropagation du gradient. Dans quel sens doit-on apprendre les poids ?
+         De la sortie vers l'entrée.
+      À quel type d'apprentissage est adapté un réseau diabolo ?
+         L'apprentissage non supervisé.
+      Quelles sont les étapes réalisées en interne par un réseau de neurones profond ?
+         Extraction de caractéristiques.
+         Classification ou régression.
+      Quel le nombre de paramètres (poids et biais) d'une couche qui a 20 entrées et 10 sorties ?
+         !!210!! car 20*10 + 1*10 (!!les bias!!)
+      Quelle couche permet de réduire la taille d'une carte de caractéristiques ?
+         Couche de pooling.
+      Quels sont les réseaux associés à un Generative Adversarial Network (GAN) ?
+         Le discriminateur.
+         Le générateur.
+      Quel est le nom de l'équilibre obtenu à l'optimalité lors de l'apprentissage d'un GAN ?
+         Nash.
+
+
+B. Découvrez les réseaux de neurones adaptés au traitement de séquences
+   1. Initiez-vous aux problématiques liées au traitement de séquences
+      Les limites des architectures "feedforward"
+         feedforward sont les réseau de neurones vue dans la partie A
+            PMC
+            MLP (multi layer perceptron)
+            CNN (réseaux convolutionnels)
+            Ils font références car ils sont :
+               * Performants
+               * rapides
+               * extraient caractéristique automatiquement
+               * algo d'apprentissage existe : rétropropagation du gradient
+         limites liées à la taille des données
+            !!taille d'entrée/ taille de sortie doivent être IDENTIQUES!!
+               Contrainte non vérifiée dans :
+                  * reconnaissance de signaux
+                  * classification de texte (avis sur site marchands)
+                  * traduction
+         L'astuce de la fenêtre glissante
+            faire analyser une fenêtre qui va scanner dans le sens du signal
+            À chaque déplacement, la fenêtre est soumise à un classificateur
+               ce classificateur est un réseau de neurone feedforward
+         Limites liées aux dépendances entre les données
+            Ils faudraient que les neurones aient la faculté de mémoire
+               C'est le RNN (réseau de neurones récurrents)
+      SumUP
+         CNN & MLP ne sont pas adaptés pour traitement de séquences de taille variable
+         Fenêtre glissante permet de solutionner ce pb
+         RNN permet de solutionner le pb de mémoire
+
+
+   2. Découvrez le fonctionnement des réseaux de neurones récurrents
+      Les réseaux de neurones récurrents
+         RNN ou Recurrent Neural Network
+            Dédiée au traitement de séquences (traitement de signaux de taille variable)
+            2 principes :
+               * fenêtre glissante (permet traiter des signaux de taille variable)
+               * Connexions récurrentes (permettent d'anlyser la parties passée du signal)
+            Par exemple il se souvient de la lettre précedente lors de la reconnaissance de texte
+            Le réseau a une !!mémoire infinie!!
+               Décision local basé sur decision n-1 qui est elle même basée sur décision n-2...
+            connexions récurrentes relient toutes les sorties des neurones d'une couche à toutes les entrées de ces mêmes neurones
+               N neuronnes --> N² connexions récurrentes
+            La récurrence intervient généralement dans la même couche, mais les sorties d'une couche peuvent être réinjectées en entrée couche plus basse
+            cf exemple_figureRnn.png
+               En rouge les connexions récurrentes qui réinjectent les sorties précédentes
+
+         Utilisation combinée avec une couche dense
+            On combine couches récurentes ac couche classiques
+               couches denses ou des couches de convolution
+            On utilise une représentation simplifiée avec une seul flèche représentant la matrice de poids
+               cf figureRnnSimplifie.png
+            RNN permet de modéliser les dépendance entre les éléments de la séquence.
+
+      Dépliement d'un réseau de neurones récurrent
+         Représentation d'un RNN est compliqué
+           Que la représentation soit détaillé ou simplifiée
+           Difficile de faire apparaitre la dimension temporelle
+           Utilisation de la représentation !!dépliée dans le temps!!
+              cf figureRnnDeplie.png
+              fait apparaitre les variables au cours du temps et l'impact sur la sortie du réseau
+              W, R et V sont dupliqués ici
+              RNN a mémoire infinie --> représentation dépliée doit être infinie
+                 La représentation est donc une approximation d'un réseau récurrent
+
+      Étiquetage de séquences, classification de séquences ou génération de séquences ?
+         3 utilisations possible d'un RNN
+            Étiquetage de séquece (Sequence labeling)
+               le réseau donne une sortie à chaque moment t
+               Adapté pour séquence qui a la même taille que la séquence d'entrée
+                  Qd sortie > entrée, on peut utiliser une classe "blank"
+            Classification de séquence (sequence classification)
+               le réseau parcourt la séquence d'entrée dans le sens de lecture
+               Produit 1 seule sortie qu'une fois la séquence d'entrée terminée
+               Fonctionne aussi en régression
+               Adapté pour classification automatique de texte "ppositifs", "négatid", "neutres"
+            Génération de séquences (ou prédiction)
+               Variante de la classification de séquence
+               la sortie à calculer  y lors de la lecture du dernier élément de la séquence d'entrée en xT est le prochain élément de la séquence xT+1.
+               Cette approche fonctionne également en régression.
+               Adapté pour prédiction de valeurs boursières
+               Adapté pour génération aléatoire de texte
+                  cf (https://blog.octo.com/des-reseaux-de-neurones-pour-generer-des-discours-politiques/)
+
+      SumUp
+         RNN permettent de
+            traiter séquences de taille variable
+            modéliser dépendances au sein de la séquence d"entrée
+         RNN peut être approcimé par un réseau non récurrent déplié dans le temps
+         Adapté pour 3 différents problèmes:
+            * étiquetage de séquence
+            * classification de séquence
+            * génération de séquence
 
 
-   Le neurone formel
-
-      Appelé aussi !!perceptron!!
-                   !!neurone formel!!
-                   !!neurone artificiel!!
-
-      cf neuroneformel-1.png
-
-      Version simplifié du neurone bio
-
-      Les entrées
-         noté X
-         Représentent les dentrites
-      Les sorties
-         noté Y
-         représentent l'axome
-      paramètre noté w et b
-         influencent le comportement du neurone
-
-      !!Équation d'un neurone formel :!!
-         !!y^=f(⟨w,x⟩+b)!!
-         chaque entrée est multipliée par w (coef) puis sommées puis additionnées par un bias b. Puis le tout passe dans ue fonction de transfert (svt nn linéaire)
-         c'est une !!modulation d'amplitude!! et non de fréquence comme dans neurone bio
-
-   Apprentissage par descente de gradient
-      c'est chercher w et b
-      c'est l'optimisation d'une fonction de perte
-         on cherche w et b qui minimise cette fonction
-
-      Dans le cas de la classification la fonction de perte est
-         L(y^,y)=−(y.log(y^)+(1−y).log(1−y^))
-         Elle s'appelle log-vraisemblance négative
-         Quand tout est dérivable, on peut utiliser la descente de gradient
-            à chaque étape les paramètres sont déplacés de la manière suivante
-               ∂L/∂wi=(∂L/∂y)*f′(⟨w,x⟩+b)xi
-               cf linearsep_anim.gif
-
-   Si tu as le temps
-      https://fr.wikipedia.org/wiki/Perceptron
-
-   SumUp
-      neurone artificiel est inspiré neurone bio
-      Dans un model linéarement dérivable et de données linéarement séparable nous avons vu comment apprendre w et b via descente de gradient
-
-
-2. Explorez les réseaux de neurones en couches
-
-   Limitation du neurone formel
-
-      1 seul neurone ne peut pas résoudre pb complexe
-         exemple : lorque les dataset ne puevent pas être séparées par une droite
-
-
-   Mettre plusieurs neurones en réseau
-
-     réseaux particuliers organisés en couches
-        réseau multicouche
-           cf reseau_multicouche.png
-           le flux va tjs de Entrées vers Sorties
-           Adapté pour data de taille fixe (comme image)
-           Appelé : perceptron multicouche (PMC),
-                    Feed-Forward
-                    Multi Layer Perceptron (MLP)
-        Réseau récurent
-           cf resau_reccurent_rnn.png
-           Apprentissage complex, on le verra plus tard
-           Adaptée pour data de taille variable
-
-   Organisation en une couche
-      cf unecoucheisolée-1.png
-      Sj=∑Wji*xi
-      yj=f(Sj)
-         où Wji représente la pondération entre l'entrée i et la sortie j.
-         On a remplacé le biais b à l'aide d'une fausse entrée qui reste constante à la valeur 1.
-             Ainsi,  Wj0 correspond au biais bj du neurone j.
-
-      !!W forme une matrice contenant les paramètres de la couche!!
-
-   Comment apprendre un réseau à une seule couche ?
-      Descente de gradient
-         ∂L/∂wj=(∂L/∂yj)*(∂yj/∂Sj)*(∂Sj/∂wji)
-         ∂L/∂wj=(∂L/∂yj)*f′(Sj)xi
-
-   Organisation en plusieurs couches
-      On connecte la sortie de la couche n à l'entrée de la couche n+1
-
-      S(l)=∑W(l)ji*I(l)i
-      O(l)j=f(l)*(S(l)j)→I(l+1)
-         Avec O la sortie
-              I l'entrée
-              (l) le numéro de la couche
-
-   Rétropropagation du gradient
-      Pour l'apprentissage du réseau
-      Comment faire
-         calculer le gradient des parametres de la derniere couche
-         puis porpager jusqu'à la premiere de proche en proche
-
-   Si tu as le temps
-      https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_artificiels
-      https://web.stanford.edu/~hastie/Papers/ESLII.pdf
-
-   SumUp
-      un neurone isolé ne peut pas résoudre de problème linéairement séparable.
-      Il faut pour cela regrouper plusieurs neurones entre eux dans un réseau de neurones artificiels.
-      Nous avons différents types de réseaux possibles
-      les réseaux de neurones en couches dits perceptrons multicouches.
-          apprentissage par un algorithme particulier, la rétropropagation du gradient
-
-3. Initiez-vous aux autoencodeurs
-   Architecture diabolo
-      cf reseau_diabolo.png
-
-      Compression/décompression de données
-         encodeur
-            prend les données en grande dimension et les compresse vers une plus petite dimension
-         decodeur
-            prend les données en petite dimension et les rétroprojette vers la plus grande dimension
-         La valeur centrale est appelé !!h!!
-         auto encodeur (AE)
-            réseau dont la cible est l'entrée elle-même
-
-      Apprentissage autoencoder
-         rétropropagation du gradient
-
-      Under/over complete
-         2 types d'AE
-            under complete
-               nb unités centrales < nb unités d'entrée
-               Pour réduction de dimension
-            over-complete
-               nb unités centrales > nb unités d'entrée
-               ils cherchent une meilleure représentation des données pour un traitement ultérieur
-                  correspond à la projection dans une plus grande dimension des SVM
-                     SVM = Machine a vecteur de support ou Support vector machine
-         chacun à ses particularités d'apprentissage
-
-      Débruitage avec les autoencodeurs (under-complete)
-         Améliorer apprentissage des under complete en rajoutant perturbation à l'entrée
-
-      Prévenir la coadaptation sur les autoencodeurs (over-complete)
-         Danger de tomber sur des solutions trivila
-            recopier l'info de couche en couche
-         Pour éviter cela, on deco ALEATOIREMENT des neurones de la représentation intermédiaire
-
-       --> C'est du deep learning
-
-
-   Réseaux profonds (données brutes vs caractéristiques)
-      La phase d'extraction et classification des caractéristiques est dynamique
-      On finit l'apprentissage de toutes les couches (y compris la première) par un apprentissage supervisé classique appelé !!fine-tuning!!.
-
-   Problématique du gradient évanescent liée aux réseaux profonds
-      Plus on rajoute de couche, plus apprentissage par retropropagation du gradient est difficile
-      Focntion de transfert de tanh est très faible <-4 et >4
-          On appelle ca le gradient vanishing (ou grandient evanescent)
-
-   SumUp
-      forme spéciale de réseau de neurones en couches
-         autoencodeur, ou réseau diabolo
-            adaptée à une tâche d'apprentissage non supervisé
-               réduction de dimension
-            effectue extraction de caractéristiques
-
-         extraction de caractéristiques utile pour apprentissage profond
-
-         apprentissage profond
-            le NN attaque data brute
-            Mais apprentissage difficil car vanishing gradient
-
-
-4. Construisez des réseaux profonds grâce aux couches convolutionnelles
-
-   Problématiques liées aux réseaux profonds
-      vanishing gradient
-      n'arrive pas à atteindre les couches basses pour faire apprentissage
-
-   la topologie des données
-      utiliser des filtres
-         masque de convolution
-         on balaye l'image avec le masque
-
-   Couche convolutionnelle (principe)
-      image d'entrée --> masque convolutionnel --> Carte de caractéristique de sortie
-      avantage : réduit le nombre de paramètre
-         !!RÉDUIT LE GRADIENT ÉVANESCENT!!
-      revient à ne conserver que certains poids d'une couche fully connected d'un RN
-
-   Architecture globale d’un réseau convolutionnel
-
-      Pour la classification le NN se termine par 1 ou plusieurs couches fully connected
-         cf schema_convcomplet.png
-
-      COUCHES CONVOLUTIONNELLES
-         Peuvent ê empilées pr former un réseau
-         accompagnées de couches de !!pooling!!
-                      de couches de !!batch normalization!!
-         Fonction d'activation
-            fonction !!relu!! ou !!softmax!!
-               fonction sans palier
-                  pour eviter saturation
-                  pour diminuer evanescence gradient
-                cf softmax.png
-
-         Cartes multiples
-            N filtre = N cartes de sortie
-
-      COUCHE POOLING
-         permettent de réduire la taille des cartes de caractéristiques
-         rééchantillonage des données
-            utilisant la moyenne ou le max
-
-      COUCHE BATCH NOMALIZATION
-         effectuent un recentrage et une normalisation des donées
-         autre technique de réduction du gradiant evanescent
-         permet de maintenir les batch près de 0
-            éviter saturation
-         tanh est une bonne fonction
-
-   Réseaux disponibles (AlexNet, VGG...)
-
-   Transfer Learning
-      Peuvent être utilisé comme initialisation
-      Losque nb d'exemple n'est pas suffisant
-
-   SumUp
-      Pb du réseau de neurones profond : gradient évanescent
-      Solution (notamment sur la modalité image) : réseaux convolutionnels
-      Principe important
-         masque de convolution
-         fonction d'activation spécifique
-         pooling
-         batch normalization
-
-
-5. Modèles génératifs grâce aux réseaux de neurones
-
-   Qu’est-ce qu’un modèle profond génératif (sans vraisemblance) ?
-      Likelihood-free Deep Generative Model
-      Décodeur d'un autoencoder (AE) comme modèle générateur
-         On utilise un AE entrainé sur une base d'image
-         on garde juste la partie decodeur
-         on tire un code z au hasard
-         et on le passe au décodeur
-            pb : on risque d'avoir une image peu réaliste (on ne connait pas la distribution)
-            soluce : Variational Auto-Encoder pour réduire la distribution lors de l'apprentissage
-
-   Apprentissage adverse, ou Generative Adversarial Network (GAN)
-      Autre méthode
-
-      basé sur 2 réseaux
-         un générateur
-            créer exemple à partir d'un code tiré sur distribution aléatoire connue
-            essaie de tromper le discriminateur
-         un Discriminateur
-            determine si l'exemple est réel ou synthétique
-            essaie de déterminer au mieux la provenance des exemples
-
-      Les 2 réseau sont regroupés en 1 seul réseau appelé GAN
-         cf schema_gan.png
-
-   Objectif d'un GAN
-      cf formula : Gan_objective.png
-      Le discriminateur minimise V(ω,θ) sur ω à θ fixé.
-      Le générateur maximise V(ω,θ) sur θ à ω fixé.
-      Point d'équilibre : !!équilibre de Nash!!
-
-   Exemple GAN autoencoder
-      On peut aussi construire une architecture combinée entre GAN et AE :
-         Cela permet des manipulations dans cet espace latent
-            ex : morphing
-
-   Tout l'univers des GAN
-      Colorisation d'image
-      cartographie
-      Inpaintin
-
-   SumUp
-      apprentissage adverse
-           synthetise exemple artificiels
-           performant sur la modalité image
-           association avec AE(autoencodeur) on peut faire du morphing ou inpainting
-              via manipulation sur l'espace latent des données
-
-Quiz
-   Quel est le rôle des dendrites dans un neurone biologique ?
-      Elles servent de capteurs au neurone
-   Comment sont modifiés les poids ou paramètres d'un neurone pour l'adapter à un problème donné ?
-      On utilise un algorithme d'optimisation du type descente de gradient.
-   Citer un exemple de problème qui ne peut être résolu par un seul neurone.
-      Reproduire la fonction ou exclusif ou xor.
-   On apprend un réseau de neurones en couche par rétropropagation du gradient. Dans quel sens doit-on apprendre les poids ?
-      De la sortie vers l'entrée.
-   À quel type d'apprentissage est adapté un réseau diabolo ?
-      L'apprentissage non supervisé.
-   Quelles sont les étapes réalisées en interne par un réseau de neurones profond ?
-      Extraction de caractéristiques.
-      Classification ou régression.
-   Quel le nombre de paramètres (poids et biais) d'une couche qui a 20 entrées et 10 sorties ?
-      !!210!! car 20*10 + 1*10 (!!les bias!!)
-   Quelle couche permet de réduire la taille d'une carte de caractéristiques ?
-      Couche de pooling.
-   Quels sont les réseaux associés à un Generative Adversarial Network (GAN) ?
-      Le discriminateur.
-      Le générateur.
-   Quel est le nom de l'équilibre obtenu à l'optimalité lors de l'apprentissage d'un GAN ?
-      Nash.
+
+
+
 
 
