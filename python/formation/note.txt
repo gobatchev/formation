@@ -7,48 +7,134 @@ Recherche du cours
       certificat de réussite à la clef
 
 
-1. Découvrez le python
-    python language interprété et non compilé
+A. Faites vos premiers pas en Python
+    1. Découvrez le python
+        python language interprété et non compilé
 
-2. Faites vos premier pas avec l'interpreteur
-3. Les variables
-4. Structures conditionnelles
+    2. Faites vos premier pas avec l'interpreteur
+    3. Les variables
+    4. Structures conditionnelles
 
-5.Les boucles
-    if
-    while
-    break (use with precautious)
-    continue
-        permet de continuer la boucle sans executer ce qu'il y a en dessous
+    5.Les boucles
+        if
+        while
+        break (use with precautious)
+        continue
+            permet de continuer la boucle sans executer ce qu'il y a en dessous
 
-6. Modularité (1/2)
-    fonction avec valeur par défault
-        def example(a=1):
-        On peut créer des !!docstring!!, c'est une explication qui sort lorsque l'on fera help(fonction)
-            s'écrit juste en dessous de la fonction :""" ceci est une docstring """
-    !!lambda!!
-        fonction courte limité à une exec
-        f = lambda x: x * x
-        f(5)
-        #return 25
-    Modules
-        la fonction help pour connaitre les fonctions du module
-        import XXXXX
-            faire XXXXXX.FFFFFF (FFFFFF est une fonction)
-        import XXXXX as YYYYYY (changer le nom du module)
-            faire YYYYYY.FFFFFF
-        from XXXXXX import FFFFFF (importer seulement une fonction du module)
-            avec le from pas besoin de faire XXXXXX.FFFFFF mais seulement FFFFFF
+    6. Modularité (1/2)
+        fonction avec valeur par défault
+            def example(a=1):
+            On peut créer des !!docstring!!, c'est une explication qui sort lorsque l'on fera help(fonction)
+                s'écrit juste en dessous de la fonction :""" ceci est une docstring """
+        !!lambda!!
+            fonction courte limité à une exec
+            f = lambda x: x * x
+            f(5)
+            #return 25
+        Modules
+            la fonction help pour connaitre les fonctions du module
+            import XXXXX
+                faire XXXXXX.FFFFFF (FFFFFF est une fonction)
+            import XXXXX as YYYYYY (changer le nom du module)
+                faire YYYYYY.FFFFFF
+            from XXXXXX import FFFFFF (importer seulement une fonction du module)
+                avec le from pas besoin de faire XXXXXX.FFFFFF mais seulement FFFFFF
 
-7. Modularité (2/2)
-    Dans un fichier mettre en préambule #!/usr/bin/python3.6
-                                        # -*-coding:utf-8 -*
-    Créer ces propres modules
-        on peut faire les import de ces modules
-        if __name__ == "__main__" permet de lancer le code si le module est lancer directement
+    7. Modularité (2/2)
+        Dans un fichier mettre en préambule #!/usr/bin/python3.6
+                                            # -*-coding:utf-8 -*
+        Créer ces propres modules
+            on peut faire les import de ces modules
+            if __name__ == "__main__" permet de lancer le code si le module est lancer directement
 
-    Les packages
-        regroupement de plusieurs modules
-        se sont juste des repertoires
+        Les packages
+            regroupement de plusieurs modules
+            se sont juste des repertoires
 
-8. Gérez les exceptions
+    8. Gérez les exceptions
+        Forme minimale du bloc try
+            /*code*/ try:
+            /*code*/     # Bloc à essayer
+            /*code*/ except:
+            /*code*/     # Bloc qui sera exécuté en cas d'erreur
+
+        Forme plus complète
+            /*code*/ try:
+            /*code*/     resultat = numerateur / denominateur
+            /*code*/ except NameError:
+            /*code*/     print("La variable numerateur ou denominateur n'a pas été définie.")
+            /*code*/ except TypeError:
+            /*code*/     print("La variable numerateur ou denominateur possède un type incompatible avec la division.")
+            /*code*/ except ZeroDivisionError:
+            /*code*/     print("La variable denominateur est égale à 0.")
+            /*code*/ else:
+            /*code*/     print("Le résultat obtenu est", resultat)
+
+        Le mot-clé finally
+            Permet d'éxecuter du code après le try quelque soit le résultat
+
+        le mot-clé pass
+            Permet de ne rien faire en cas d'erreur
+
+        Les assertions
+            /*code*/ assert var == 8
+            Permet de lever une erreur suivant une condition
+               nom de l'erreur : AssertionError
+
+        Lever une exception
+            /*code*/ raise TypeDeLException("message à afficher")
+
+        SumUp
+            Intercepter les erreurs ac : try/except
+            assertion : assert condition
+                lève AssertionError si condition == FALSE
+            Lever une exception :raise
+
+
+    9. TP : tous au ZCasino
+        cf : TP_tous_au_Zcasino/
+
+    10. Quiz
+        15/20
+
+B. Découvrez la Programmation Orientée Objet côté utilisateur
+    1. Créez votre premier objet : les chaînes de caractères
+        c'est quoi un objet ?
+            un objet est une structure de données,
+                comme les variables, qui peut contenir elle-même d'autres variables et fonctions
+            En python tout est objet
+
+        Les méthodes de la classe str
+            Objet
+                objet.methode()
+                Peut contenir variable et methode (=fonction)
+            Classes
+                modèle qui servira à construire un objet
+
+    2. Créez des listes et des tuples (1/2)
+        Créons et éditons nos premières listes
+            liste = []
+        Insérer des objets dans une liste
+            ma_liste.append("toto")
+        Insérer un élément dans la liste
+            ma_liste.insert(2, 'c') # On insère 'c' à l'indice 2
+        Concaténation de listes
+            ma_liste1 += ma_liste2
+            ou ma_liste1.extend(ma_liste2)
+        Suppression d'éléments d'une liste
+            del ma_liste[2] #index de l'element
+            ma_liste.remove(32) #l'élément lui-même
+        Le parcours de listes
+            while i < len(ma_liste):
+            for elt in ma_liste: #meilleur méthode
+            La fonction enumerate
+                for elt in enumerate(ma_liste):
+                crée un tuple avec (i,lélément)
+        Les tuples
+            séquence pouvant contenir des objets.
+            Ne peut être modifié une fois créé
+
+
+
+
