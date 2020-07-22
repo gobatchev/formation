@@ -96,7 +96,95 @@ Techniques « avancées » du langage C
           char chaine[];
           printf("toto : %s", chaine);
      5. Le préprocesseur
+          Les includes
+              Commence tjs par #
+              "<>" qd le .h est installé dans l'IDE
+              "" qd dans le dossier du projet
+          Les define
+              associer une valeur à un mot
+              different d'une constante
+                  va remplacer le mot par ca valeur
+                  n'occupe dpas de case mémoire
+              généralement placés dans les .h
+          Les constantes prédéfinies
+              __LINE__: donne le numéro de la ligne actuelle.
+              __FILE__: donne le nom du fichier actuel.
+              __DATE__: donne la date de la compilation.
+              __TIME__: donne l'heure de la compilation.
+          Les macros
+              Macro sans paramètres
+              Macro avec paramètres
+          Les conditions
+              Faire des compilations conditionnelles
+              /*code*/ #if condition
+              /*code*/     /* Code source à compiler si la condition est vraie */
+              /*code*/ #elif condition2
+              /*code*/     /* Sinon si la condition 2 est vraie compiler ce code source */
+              /*code*/ #endif
+          #ifndef pour éviter les inclusions infinies
+              /*code*/ #ifndef DEF_NOMDUFICHIER // Si la constante n'a pas été définie le fichier n'a jamais été inclus
+              /*code*/ #define DEF_NOMDUFICHIER // On définit la constante pour que la prochaine fois le fichier ne soit plus inclus
+              /*code*/ /* Contenu de votre fichier .h (autres include, prototypes, define...) */
+              /*code*/ #endif
+
+
      6. Créez vos propres types de variables
+          Les structures
+              Définir une structure
+                  définies dans les .h
+                  /*code*/ struct NomDeVotreStructure
+                  /*code*/ {
+                  /*code*/     int variable1;
+                  /*code*/     int variable2;
+                  /*code*/     int autreVariable;
+                  /*code*/     double nombreDecimal;
+                  /*code*/ };
+              Utilisation d'une structure
+                  /*code*/ struct Coordonnees point; // Création d'une variable "point" de type Coordonnees
+              Le typedef
+                  dans le .h ecrire /*code*/ typedef struct Coordonnees Coordonnees;
+                  crée un alias
+              Modifier les composantes de la structure
+                  x.point = 10 /*si la structure a un variable point
+              Initialiser une structure
+                  important pour ne pas avoir valeurs résiduelles
+              Pointeur de structure
+                  Coordonnees *point = NULL;
+                  Envoi de la structure à une fonction
+                      /*code*/ initialiserCoordonnees(&monPoint);
+                      /*code*/ void initialiserCoordonnees(Coordonnees* point)
+                      /*code*/ {
+                      /*code*/     (*point).x = 0;
+                      /*code*/     (*point).y = 0;
+                      /*code*/ }
+              Autre maniere d'écrire des pointeurs de structure
+                  (*point).x = 0;
+                  point->x = 0;
+                     la flèche que sur un pointeur
+
+          Les énumérations
+              /*code*/ typedef enum Volume Volume;
+              /*code*/ enum Volume
+              /*code*/ {
+              /*code*/     FAIBLE, MOYEN, FORT
+              /*code*/ };
+
+          SumUp
+              Une structure
+                  type de variable personnalisé à définir
+                  composée de « sous-variables »
+                      int
+                      double
+                      tableaux
+                  Acceder à un des composants de la structure : joueur.prenom
+                  Si on manipule un pointeur de structure
+                      flèche à la place du point
+                          pointeurJoueur->prenom
+               Une énumération
+                   type de variable personnalisé
+                   peut seulement prendre une des valeurs prédéfinies
+
+
      7. Lire et écrire dans des fichiers
      8. L'allocation dynamique
      9. TP : réalisation d'un Pendu
