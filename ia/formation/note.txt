@@ -436,6 +436,67 @@ B. Découvrez les réseaux de neurones adaptés au traitement de séquences
             * génération de séquence
 
 
+   3. Maitrisez les algorithmes d'apprentissage des réseaux récurrents
+      La problématique de l'apprentissage d'un réseau récurrent
+         RNN : couche récurrente suivie d'une couche dense
+            composé de matrice W, R et V (R matrices des poids réccurents)
+            Rétropropagation du gradient tel quel ne fonctionne pas (à cause de R)
+         La solution : la rétropropagation à travers le temps
+            Exploiter la version dépliée du réseau
+               On perd la capacité !!mémoire infinie!!
+            appelée !!rétropropagation à travers le temps!!
+            ou appelée !!BackPropagation Through Time (BPTT)!!
+            R et W sont identiques à chaque pas de temps
+            note : il existe un autre algo peu utilisé
+               Real-Time Recurrent Learning (RTRL)
+               couteux en temps de calcul
+         Les dangers de la BPTT : disparition et explosion du gradient
+            Déplier le réseau --> réseau plus profond
+            K augmente la profondeur du réseau
+            K{10,100} en général
+            K fixé lors de l'apprentissage
+            Disparition du gradient du à la profondeur du réseau
+            Explosion du gradient
+               car les poids de la couche récurrente sont dupliqués
+               gradient dont la norme est > 1
+               méthode pour éviter cela
+                  tester cette norme et à la limiter si trop importante
+            l'activation ReLU
+               permet de limiter vanishing gradient
+               mais facilite l'explosion du gradient
+         les RNN sont la méthode de référence pour
+            traiter de séquences de type:
+               écriture manuscrite
+               parole
+               séries temporelles
+
+      Les limites des réseaux récurrents "simples"
+         RNN décrit précédement sont des réseaux Vanilla RNN ou simples
+            insufisant pour modéliser des dépendances à long terme
+               ex : traitement du langage naturelle
+            n'ont pas la capacité de maintenir un état au cours du temps
+            Solution : réseaux de neurones à mémoire interne
+               LSTM (Long Short Term Memory)
+               GRU (Gated Recurrent Unit)
+               Consiste à controler un état interne en fonction du contexte passé
+         Apprentissage embarqué
+            Avoir les bonnes sorties pour tous les instants t de la séquence
+            !!algo, appelé CTC pour Connexionist Temporal Classification!!
+               Obtenir étiquettes niveau fenêtre à partir de étiquete séquence
+               Inspiré de l'algo "forward-backward"
+                  algo itératif
+                  estime alternativement param du modèle & étiquettes fenêtres
+                  On appelle ce type d'apprentissage un apprentissage embarqué
+         SumUp
+            l'algorithme de la rétropropagation à travers le temps
+               permet d'apprendre les réseaux de neurones simples.
+            BPTT reposse sur dépliement du RNN à travers le temps
+               déplié, on peut faire une rétropropagation du gradient classique
+            pb du BPTT
+               explsion du grandient
+               grandient vanishing
+            Solution : RÉSEAU DE NEURONES À MÉMOIRE INTERNE
+
 
 
 
