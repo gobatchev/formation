@@ -498,6 +498,154 @@ B. Découvrez les réseaux de neurones adaptés au traitement de séquences
             Solution : RÉSEAU DE NEURONES À MÉMOIRE INTERNE
 
 
+   4. Découvrez les cellules à mémoire interne : les LSTM
+      LSTM = Long Short Term Memory
+         Permet de maintenir état sur longue période de temps
+         possèdent mémoire interne appelée : !!cellule!!
+         peut maintenir un état aussi longtemps que nécessaire
+         cf shéma : LSTMsimple.png
+            piloté par 3 portes :
+               porte d'entrée --> décide si doit modifier contenu de cellule
+               porte d'oublie --> décide s'il faut mêtre à 0 la cellule
+               porte de sortie --> décide si contenu cellule doit influer sortie neurone
+         Utilisé en couche
+         Les sorties de ts les neurones sont réinjectés en entrée de tous les neurones
+         !!LSTM sont 2x plus lourds que couches denses classiques!!
+            À utiliser ac parcimonie
+      Variante de LSTM --> GRU (Gated Recurrent Unit)
+         On supprime la porte d'oublie
+      Apprentissage des LSTM
+         algo : BPTT (Backpropagation Through Time)
+      LSTM bidirectionnels : les BLSTM (Bidirectional - LSTM)
+         consiste à dédoubler une couche LSTM
+            parcourir le signal de gauche à droite,
+            et de droite à gauche
+         pas possible dans pr app en temps réel
+      Les MDLSTM : Multi-dimensional LSTM
+         parcourir signal selon :
+            haut -> bas
+            bas -> haut
+            gauche -> droite
+            droite -> gauche
+         modéliser dépendances dans des signaux
+            quelle que soit leur dimension
+
+      SumUp
+         LSTM
+            modéliser des dépendances à très long terme
+            piloté par des portes de contrôle
+            Tous les éléments sont différentiables
+               BPTT
+            architectures bidirectionnelles et multidimensionnelles
+               modéliser les dépendances dans plusieurs directions
+
+
+   5. Construisez des architectures neuronales modulaires
+      Jouez aux LEGO avec des réseaux de neurones
+         Différentes couches de neurones
+            couches denses
+            couches convolutionnelles
+            couches récurrentes
+         1 seul algo
+            Retropragation du gradient
+         possible d'empiler diff couches de diff natures
+
+      Généralisation de la rétropropagation du gradient
+         cf bloc-ConvertImage.png
+         En phase de décision
+             propage l'information des entrées vers les sorties
+             Hi=Fi(Hi−1)
+         En phase d'apprentissage
+            calcule successivement les gradients de l'erreur
+               de la sortie vers l'entrée
+               ∂J/∂Hi−1=(∂J/∂Hi)×(∂Hi/∂Hi−1)
+            !!toutes les fonctions  Fi utilisées soient différentiables!!
+
+      Intérêt des différents types de couches
+         *Couches denses
+            pour décider
+            appelées fully connected
+            comportent beaucoup de paramètres
+            !!nécessitent nombre important de données pr ê entraînées!!
+            !!utilisées afin de prendre une décision!!
+            !!utilisées comme dernière(s) couche(s) d'un modèle!!
+
+         *Couches convolutionnelles
+            pour caractériser
+            comportent que les poifs liés aux filtres
+            utilisation intensive de couches convolutionnelles
+            utilisées avec des couches de pooling
+               afin de concentrer l'information
+            !!Sont des extracteurs de caractéristiques!!
+            utilisés dans les couches basses des réseaux
+               afin d'apprendre des représentations
+            adaptées aux traitement des images
+            Applicable sur n'importe quel type de signal
+               texte
+               signaux sonores
+
+         *Couches récurrentes
+            pour modéliser les dépendances
+            Adaptés pour tous les problèmes impliquant des séquences
+            les couches récurrentes sont lourdes
+               à cause des connexions récurrentes.
+               ex : cellule LSTM
+               on limite le nombre de couches récurrentes
+               on limite le nombre de neurones dans ces couches au strict nécessaire
+            Adaptés pour tous les problèmes impliquant des séquences
+               exite version générative
+               cf : https://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/
+
+         Exemple d'architectures "LEGO"
+            Exemple de modèle profond pour la classification d'images
+               Architecture VGG
+                  cf : vgg16.png
+            Exemple de modèle profond pour la reconnaissance d'écriture
+               cf aticle "Are Multidimensional Recurrent Layers Really Necessary for Handwritten Text Recognition?"
+               cf cnn-lstm.png
+               Très ressemblant ac VGG
+                  La différence est la présence d'une couche BLSTM
+                     traite l'aspect séquentiel de l'écriture manuscrite
+            Exemple de modèle profond pour la génération de légende
+               cherche à générer une légende décrivant la scène
+               cf gen_legende.png
+                  1) image d'entrée
+                  2) extraction de caractéristiques convolutionnelles
+                  3) réseau récurrent avec modèle d'attention sur l'image
+                  4) génération mot par mot.
+               Concernant l'apprentissage du modèle
+                  modèle convolutionnel est préappris sur la base ImageNet
+                  modèle génératif est préappris sur une base de texte telle que Wikipedia
+                  L'apprentissage du système complet y compris le modèle d'attention, est finalisé sur une base de couples (image, légende) annotés
+
+            SumUp
+               on peut empiler les couches adéquates
+               entraîner le modèle par la rétropropagation du gradient
+
+
+   Quiz
+      À nombre de neurones équivalent, quel type de couche conduit au nombre le plus important de paramètres ?
+         Couche récurrente de type LSTM
+      À nombre de neurones équivalent, quel type de couche conduit au nombre le moins important de paramètres ?
+         Couche convolutionnelle
+      Quelle méthode permet l’apprentissage des réseaux de neurones récurrents à l’aide de la rétropropagation traditionnelle ?
+         La rétropropagation à travers le temps
+      Quelle est l'application pour laquelle l'utilisation d'un réseau de neurones récurrent n'est a priori pas nécessaire ?
+         La reconnaissance d'image
+      Parmi ces propositions, quelle est celle qui permet de lutter le plus efficacement contre l'explosion du gradient pouvant apparaître lors de l'apprentissage des réseaux récurrents ?
+         Utiliser le "gradient clipping"
+      Quelle proposition correspond à l'une des portes de contrôle d'une cellule LSTM ?
+         La porte d'entrée
+      Quelle fonction d'activation vaut-il mieux éviter pour apprendre correctement un réseau de neurones récurrent ?
+         ReLU (et ses variantes)
+      Que permet de faire un mécanisme d'attention ?
+         De porter son attention sur la bonne partie du signal d'entrée
+      Quels sont les trois modes de fonctionnement d'un réseau de neurones récurrent ?
+         La génération de séquences
+         La classification de séquences
+         L'étiquetage de séquences
+      Quelle méthode permet de traiter des signaux de taille variable ?
+         La fenêtre glissante
 
 
 
