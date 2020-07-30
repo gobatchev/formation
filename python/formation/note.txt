@@ -135,6 +135,37 @@ B. Découvrez la Programmation Orientée Objet côté utilisateur
             séquence pouvant contenir des objets.
             Ne peut être modifié une fois créé
 
-
-
-
+    3. Créez des listes et des tuples (2/2)
+        Entre chaînes et listes
+            Des chaînes aux listes
+                >>> ma_chaine.split(" ")
+                ['Bonjour', 'à', 'tous']
+            Des listes aux chaînes
+                >>> " ".join(ma_liste)
+                'Bonjour à tous'
+            Une application pratique
+                cf ex_liste_and_tuples.py
+            Les listes et paramètres de fonctions
+                Les fonctions dont on ne connaît pas à l'avance le nb de param
+                    def fonction(*parametres):
+                    étoile * devant le nom du paramètre
+                        Va placer ts les paramètres de la fonction ds 1 tuple
+                Transformer une liste en paramètres de fonction
+                    >>> print(*liste_des_parametres)
+                    1 4 9 16 25 36
+            Les compréhensions de liste
+                Parcours simple
+                    >>> liste_origine = [0, 1, 2, 3, 4, 5]
+                    >>> [nb * nb for nb in liste_origine]
+                    [0, 1, 4, 9, 16, 25]
+                Filtrage avec un branchement conditionnel
+                    >>> liste_origine = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                    >>> [nb for nb in liste_origine if nb % 2 == 0]
+                    [2, 4, 6, 8, 10]
+                Mixing
+                    >>> qtt_a_retirer = 7 # On retire chaque semaine 7 fruits de chaque sorte
+                    >>> fruits_stockes = [15, 3, 18, 21] # Par exemple 15 pommes, 3 melons...
+                    >>> [nb_fruits-qtt_a_retirer for nb_fruits in fruits_stockes if nb_fruits>qtt_a_retirer]
+                    [8, 11, 14]
+                Nouvelle application concrète
+                    cf comprehension_de_list.py
