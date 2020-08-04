@@ -169,3 +169,131 @@ B. Découvrez la Programmation Orientée Objet côté utilisateur
                     [8, 11, 14]
                 Nouvelle application concrète
                     cf comprehension_de_list.py
+
+    4. Utilisez des dictionnaires
+        Création et édition de dictionnaires
+            outil puissant
+            Les dictionnaires n'ont pas de structure ordonnée
+            C'est un objet conteneur
+                on uilise des clefs oour acceder aux donées qu'il contient
+            Créer un dictionnaire
+                >>> mon_dictionnaire = dict()
+                >>> mon_dictionnaire["pseudo"] = "Prolixe"
+                >>> mon_dictionnaire["mot de passe"] = "*"
+                >>> mon_dictionnaire
+                    réponse --> {'mot de passe': '*', 'pseudo': 'Prolixe'}
+                Créer un dictionnaire déjà remplis
+                    placard = {"chemise":3, "pantalon":6, "tee-shirt":7}
+            Supprimer des clés d'un dictionnaire
+                del : mot clef
+                pop : methode du dictionnaire
+                    pop renvoi la valeur supprimé en plus
+            Un peu plus loin
+                On se sert parfois des dictionnaires pr stocker des fonctions
+                    >>> fonctions = {}
+                    >>> fonctions["fete"] = fete # on ne met pas les parenthèses
+                    >>> fonctions["oiseau"] = oiseau
+                    >>> fonctions["oiseau"]
+                        <function oiseau at 0x00BA5198>
+                    >>> fonctions["oiseau"]() # on essaye de l'appeler
+                        Fais comme l'oiseau...
+            Les méthodes de parcours
+                La méthode keys
+                    renvoie la liste des clés contenues dans le dictionnaire
+                    >>> for cle in fruits.keys():
+                    ...     print(cle)
+                La méthode values
+                    parcourir les valeurs contenues dans un dictionnaire
+                    >>> if 21 in fruits.values():
+                    ...     print("Un des fruits se trouve dans la quantité 21.")
+            Parcours des clés et valeurs simultanément
+                la méthode items
+                    Elle renvoie une liste, contenant les couples clé : valeur
+                    Renvoie sous la forme d'untuple
+                    >>> fruits = {"pommes":21, "melons":3, "poires":31}
+                    >>> for cle, valeur in fruits.items():
+                         print("La clé {} contient la valeur {}.".format(cle, valeur))
+                    La clé melons contient la valeur 3.
+                    La clé poires contient la valeur 31.
+                    La clé pommes contient la valeur 21.
+            Les dictionnaires et paramètres de fonction
+                Récupérer les paramètres nommés dans un dictionnaire
+                    >>> def fonction_inconnue(**parametres_nommes):
+                    ...     """Fonction permettant de voir comment récupérer les paramètres nommés
+                    ...     dans un dictionnaire"""
+                    ...     print("J'ai reçu en paramètres nommés : {}.".format(parametres_nommes))
+                    >>> fonction_inconnue() # Aucun paramètre
+                    J'ai reçu en paramètres nommés : {}
+                    >>> fonction_inconnue(p=4, j=8)
+                    J'ai reçu en paramètres nommés : {'p': 4, 'j': 8}
+                    il faut mettre deux étoiles ** avant le nom du paramètre
+                Transformer un dictionnaire en paramètres nommés d'une fonction
+                    >>> parametres = {"sep":" >> ", "end":" -\n"}
+                    >>> print("Voici", "un", "exemple", "d'appel", **parametres)
+                    Voici >> un >> exemple >> d'appel -
+                        paramètres nommés :
+                            on met ** avt le nom dans l'appel de la fonction
+                    equivalent à :
+                        >>> print("Voici", "un", "exemple", "d'appel", sep=" >> ", end=" -\n")
+                SumUp
+                    créer un dictionnaire
+                        dictionnaire = {cle1:valeur1, cle2:valeur2, cleN:valeurN}
+                    Ajouter ou remplacer un élément dans un dictionnaire
+                        dictionnaire[cle] = valeur
+                    supprimer une clé (et sa valeur correspondante)
+                        mot-clé del
+                        méthode pop
+                    parcourir un dictionnaire
+                        parcourt les clés
+                            méthodes keys
+                        parcourt les valeurs
+                            méthode values
+                        parcourt les couples clé-valeur
+                            méthode items
+                        capturer les paramètres nommés passés à une fonction
+                            def fonction_inconnue(**parametres_nommes):
+                                (les paramètres nommés se retrouvent dans le dictionnaire parametres_nommes)
+
+    5. Utilisez des fichiers
+        Ouvrir un fichier
+            mon_fichier = open("fichier.txt", "r")
+            r pour Read
+            a pour Append
+            w pour Write
+        Fermer le fichier
+            mon_fichier.close()
+        Lire l'intégralité du fichier
+            >>> mon_fichier = open("fichier.txt", "r")
+            >>> contenu = mon_fichier.read()
+        Écriture dans un fichier
+            Écrire une chaîne
+                 write n'accepte que des caractères
+                 mon_fichier.write("Premier test d'écriture dans un fichier via Python")
+        Le mot-clé with
+            with open(mon_fichier, mode_ouverture) as variable:
+            Le mot-cléi with permet de créer un "context manager"
+                vérifie que le fichier est ouvert et fermé
+        Enregistrer des objets dans des fichiers
+            Grâce au module pickle
+            sauvegarder l'objet
+                >>> score = {
+                ...   "joueur 1":    5,
+                ...   "joueur 2":   35,
+                ...   "joueur 3":   20,
+                ...   "joueur 4":    2,
+                >>> }
+                >>> with open('donnees', 'wb') as fichier:
+                ...     mon_pickler = pickle.Pickler(fichier)
+                ...     mon_pickler.dump(score)
+            Récupérer nos objets enregistrés
+            >>> with open('donnees', 'rb') as fichier:
+            ...     mon_depickler = pickle.Unpickler(fichier)
+            ...     score_recupere = mon_depickler.load()
+        SumUp
+            ouvrir un fichier
+                fonction openprenant
+                    en paramètre le chemin fichier et mode d'ouverture
+                lire dans un fichier en utilisant la méthode read.
+                écrire dans un fichier en utilisant la méthode write.
+                Un fichier doit être refermé après usage : méthode close
+                Module pickle pour enregistrer et recherger des objets Python
