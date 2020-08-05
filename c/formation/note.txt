@@ -186,10 +186,74 @@ Techniques « avancées » du langage C
 
 
      7. Lire et écrire dans des fichiers
+         Ouvrir et fermer un fichier
+            FILE* fichier = NULL;
+            fichier = fopen("test.txt", "w");
+
+            fputc: écrit un caractère dans fichier -UN SEUL caractère à la fois
+
+            fputs: écrit une chaîne dans le fichier ;
+               proto : char* fputs(const char* chaine, FILE* pointeurSurFichier);
+
+            fprintf: écrit chaîne « formatée » dans fichier, similaire à printf
+
+            fclose(fichier);
+
+         Lire dans un fichier
+             fgetc: lit un caractère ;
+             fgets: lit une chaîne ;
+             fscanf: lit une chaîne formatée.
+                 fscanf(fichier, "%d %d %d", &score[0], &score[1], &score[2]);
+                 printf("Les meilleurs scores sont : %d, %d et %d", score[0], score[1], score[2]);
+             EOF signifie End Of File
+                  while (caractereActuel != EOF)
+
+         Se déplacer dans un fichier
+             ftell: indique position actuelle ds le fichier
+             fseek: positionne le curseur à un endroit précis
+             rewind: remet le curseur au début du fichier
+
+         Renommer et supprimer un fichier
+             rename: renomme un fichier ;
+             remove: supprime un fichier.
+
+
      8. L'allocation dynamique
+         sizeof() --> Connaitre taille en octet
+         malloc   --> « Memory ALLOCation »
+             demande à l'OS la permission d'utiliser de la mémoire
+         free     --> « Libérer »
+             indiquer à l'OS que l'on n'a plus besoin de la mémoire demandée.
+             La place en mémoire est libérée
+             un autre programme peut maintenant s'en servir au besoin.
+         Allocation dynamique d'un tableau
+
+         SumUp
+             Une variable occupe plus ou moins d'espace en mémoire en fonction de son type.
+             On peut connaître le nombre d'octets occupés par un type : syzeof()
+             L'allocation dynamique : réserver manuellement de l'espace en mémoire pour une variable ou un tableau.
+             L'allocation est effectuée avec malloc()
+             libérer la mémoire avec free() dès qu'on n'en a plus besoin.
+             L'allocation dynamique permet créer un tableau dont la taille est déterminée par une variable au moment de l'exécution.
+
+
      9. TP : réalisation d'un Pendu
+
+
      10. La saisie de texte sécurisée
+         La fonctionscanf très complexe et certaines limites
+         Un buffer overflow survient lorsqu'on dépasse l'espace réservé en mémoire
+             par exemple si l'utilisateur entre 10 caractères alors qu'on n'avait réservé que 5 cases en mémoire.
+         faire appel à la fonction fgets
+             pour récupérer du texte saisi par l'utilisateur.
+         éviter à tout prix d'utiliser la fonction gets
+             qui n'offre pas de protection contre le buffer overflow.
+         écrire votre propre fonction de saisie du texte qui fait appel à fgets
+
+
      11. Apprenez à expliquer les pointeurs
+
+
 
 
 
