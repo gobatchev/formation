@@ -251,9 +251,20 @@ Techniques « avancées » du langage C
          écrire votre propre fonction de saisie du texte qui fait appel à fgets
 
 
-     11. Apprenez à expliquer les pointeurs
+    11. Apprenez à expliquer les pointeurs
 
 
+Création de jeux 2D en SDL
+    1. Installation de la SDL
+    2. Création d'une fenêtre et de surfaces
+    3. Afficher des images
+    4. La gestion des événements
+    5. TP : Mario Sokoban
+    6. Maîtrisez le temps !
+    7. Écrire du texte avec SDL_ttf
+    8. Jouer du son avec FMOD
+    9. TP : visualisation spectrale du son
+        8/10
 
 
 
