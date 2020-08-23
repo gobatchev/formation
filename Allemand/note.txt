@@ -9,3 +9,10 @@ cf ASSIMIL learning book
    1.4 Die Tasse ist zu klein
    1.5 Sie ist klein
    1.6 Anne ist klein, aber Klaus ist gro*B
+2. Das Restaurant
+   2.1 Ich bin gro*B
+   2.2 Sie sind klein
+   2.3 Ist das Restaurant teuer ?
+   2.4 Nein, es ist nicht teuer
+   2.5 Dort ist ein Café
+   2.6 Ich habe Hunger
