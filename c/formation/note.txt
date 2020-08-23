@@ -266,5 +266,33 @@ Création de jeux 2D en SDL
     9. TP : visualisation spectrale du son
         8/10
 
+Les structures de données
+    1. Les listes chaînées
+        Représentation d'une liste chaînée
+            Moyen d'organiser une série de données en mémoire
+                 Assembler des structures en les liant à l'aide de pointeurs
+            !!C'est une chaîne de pointeurs!!
 
+        Construction d'une liste chaînée
+            Un élément de la liste
+                */code/*  typedef struct Element Element;
+                */code/*  struct Element
+                */code/*  {
+                */code/*      int nombre;
+                */code/*      Element *suivant;
+                */code/*  };
+            La structure de contrôl
+                contient un pointeur vers le premier élément de la liste
+                */code/*  typedef struct Liste Liste;
+                */code/*  struct Liste
+                */code/*  {
+                */code/*      Element *premier;
+                */code/*  };
+            Le dernier élément de la liste
+                Faire pointer le dernier élément de la liste vers NULL
+
+        Les fonctions de gestion de la liste    
+        
+    2. Les piles et les files
+    3. Les tables de hachage
 
