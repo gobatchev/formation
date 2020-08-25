@@ -16,3 +16,10 @@ cf ASSIMIL learning book
    2.4 Nein, es ist nicht teuer
    2.5 Dort ist ein Café
    2.6 Ich habe Hunger
+3. Im Park
+   3.1 Sprechen Sie Französisht? 
+   3.2 Nein, icht spreche nur Deutsh.
+   3.3 Ist Dieser Tee ist gut ?
+   3.4 Dieses Restaurant ist nicht teuer.
+   3.5 Ich spreche ein wenig Englisch
+   3.6 Sie sind oft hier?
