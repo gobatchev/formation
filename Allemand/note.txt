@@ -23,3 +23,10 @@ cf ASSIMIL learning book
    3.4 Dieses Restaurant ist nicht teuer.
    3.5 Ich spreche ein wenig Englisch
    3.6 Sie sind oft hier?
+4. Wie ghet's
+   4.1 Guten Abend, Fräulein Wagner! Wie geht's?
+   4.2 Das ist Herr Müller
+   4.3 Was trinken Sie?
+   4.4 Anne trinkt eine Limonade
+   4.5 Kommst du mit ins Café
+   4.6 Ich habe Durst. Und du?

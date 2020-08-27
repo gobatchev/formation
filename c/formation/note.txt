@@ -292,7 +292,16 @@ Les structures de données
                 Faire pointer le dernier élément de la liste vers NULL
 
         Les fonctions de gestion de la liste    
-        
+            Initialiser la liste
+            Ajouter un élément
+            Supprimer un élément
+            Afficher la liste chaînée
+
     2. Les piles et les files
+       pile
+           LIFO
+       file
+           FIFO
+           
     3. Les tables de hachage
 
