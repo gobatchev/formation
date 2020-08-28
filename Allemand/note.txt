@@ -30,3 +30,10 @@ cf ASSIMIL learning book
    4.4 Anne trinkt eine Limonade
    4.5 Kommst du mit ins Café
    4.6 Ich habe Durst. Und du?
+5. Am Telefon
+   5.1 Gutten Tag! Hier ist Fräulein Wagner.
+   5.2 Mein Name ist Wolfgang
+   5.3 Verzeihung, wer bist du?
+   5.4 Ich gehe jetzt nach Hause
+   5.5 Wo ist Peter? Er ist zu Hause
+   5.6 Meine Tochter ist noch klein
