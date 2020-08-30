@@ -37,3 +37,10 @@ cf ASSIMIL learning book
    5.4 Ich gehe jetzt nach Hause
    5.5 Wo ist Peter? Er ist zu Hause
    5.6 Meine Tochter ist noch klein
+6. Immer dasselbe...
+   6.1 Der Zug färht um sechs Uhr.
+   6.2 Wo ist meine Fahrkarte
+   6.3 Warte! Ich komme sofort!
+   6.4 Wir haben nur zehn Minuten Zeit
+   6.5 Mein Name ist Anne Müller
+   6.6 Dast ist immer dasselbe!
