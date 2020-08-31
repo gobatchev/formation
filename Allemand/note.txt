@@ -44,3 +44,22 @@ cf ASSIMIL learning book
    6.4 Wir haben nur zehn Minuten Zeit
    6.5 Mein Name ist Anne Müller
    6.6 Dast ist immer dasselbe!
+7. Wiederholung und Erklärungen
+   7.1 alphabet
+   7.2 Trois genres articles indéfinis:
+          masculin : der
+          féminin  : die  
+          neutre   : das
+
+       Articles démonstratifs:
+          masculin : dieser
+          féminin  : diese
+          neutre   : dieses
+
+       ich trinke
+       du trinks
+       er/sie/es trinkt
+       wir trinken
+       sie trinken
+       Sie trinken (politesse)
+*******************************************************************************
