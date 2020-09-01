@@ -17,7 +17,7 @@ cf ASSIMIL learning book
    2.5 Dort ist ein Café
    2.6 Ich habe Hunger
 3. Im Park
-   3.1 Sprechen Sie Französisht? 
+   3.1 Sprechen Sie Französisht?
    3.2 Nein, icht spreche nur Deutsh.
    3.3 Ist Dieser Tee ist gut ?
    3.4 Dieses Restaurant ist nicht teuer.
@@ -48,7 +48,7 @@ cf ASSIMIL learning book
    7.1 alphabet
    7.2 Trois genres articles indéfinis:
           masculin : der
-          féminin  : die  
+          féminin  : die
           neutre   : das
 
        Articles démonstratifs:
@@ -63,3 +63,11 @@ cf ASSIMIL learning book
        sie trinken
        Sie trinken (politesse)
 *******************************************************************************
+8. Ein Fest
+   8.1 Wer ist das? Ich wei*B nicht
+   8.2 Alle amüsieren sich und tanzen.
+   8.3 Ich glaube er ist ein Freund von Fräulein Schmitt.
+   8.4 Er kennt sie nicht.
+   8.5 Wissen Sie, warum er lacht?
+   8.6 Die kleine Frau dort ist mein Mutter.
+
