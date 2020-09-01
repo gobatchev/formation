@@ -327,3 +327,15 @@ C. Programmation Orientée Objet côté développeur
             On définit les attributs d'une instance dans le constructeur de sa classe:
                 self.nom_attribut = valeur.
 
+
+    2. Définissez des propriétés
+        Encapsulation
+            Accesseur
+                mon_objet.get_mon_attribut()
+            mutateur
+                mon_objet.set_mon_attribut(valeur)
+        Propriétes
+            lieu_residence = property(_accesseur, _mutateur)
+
+    3. Appliquez des méthodes spéciales
+
