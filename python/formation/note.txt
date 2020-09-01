@@ -297,3 +297,33 @@ B. Découvrez la Programmation Orientée Objet côté utilisateur
                 écrire dans un fichier en utilisant la méthode write.
                 Un fichier doit être refermé après usage : méthode close
                 Module pickle pour enregistrer et recherger des objets Python
+    6. Variables et références
+        2 variables peuvent pointer sur même objet --> comme les pointeurs
+        >>> ma_liste1 == ma_liste2 # On compare le contenu des listes
+            True
+        >>> ma_liste1 is ma_liste2 # On compare leur référence
+            False
+
+    7. TP pendu
+    8. Quiz
+
+C. Programmation Orientée Objet côté développeur
+    1. Appréhendez les classes
+        Classe: mot clef class
+        constructeur : mot clef def __init__(self):
+        instanciacion: self.nom
+
+        Attributs de classe
+            ce sont en gros les variables
+        Les methodes
+            ce sont en gros les fonctions
+        Le paramètre self
+
+        SumUp
+            On définit une classe en suivant la syntaxeclass NomClasse:.
+            Les méthodes se définissent comme fonctions, elles sont ds la classe.
+            Les méthodes d'instance prennent en premier paramètre self
+            On construit une instance de classe en appelant son constructeur __init__
+            On définit les attributs d'une instance dans le constructeur de sa classe:
+                self.nom_attribut = valeur.
+
