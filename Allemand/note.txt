@@ -2,51 +2,51 @@
 Learn Deutsch
 *******************************************************************************
 cf ASSIMIL learning book
-1. Café
-   1.1 Wie ist der Tee?
-   1.2 Er gut
-   1.3 Verzeihung Her Ober!
-   1.4 Die Tasse ist zu klein
-   1.5 Sie ist klein
-   1.6 Anne ist klein, aber Klaus ist gro*B
-2. Das Restaurant
-   2.1 Ich bin gro*B
-   2.2 Sie sind klein
-   2.3 Ist das Restaurant teuer ?
-   2.4 Nein, es ist nicht teuer
-   2.5 Dort ist ein Café
-   2.6 Ich habe Hunger
-3. Im Park
-   3.1 Sprechen Sie Französisht?
-   3.2 Nein, icht spreche nur Deutsh.
-   3.3 Ist Dieser Tee ist gut ?
-   3.4 Dieses Restaurant ist nicht teuer.
-   3.5 Ich spreche ein wenig Englisch
-   3.6 Sie sind oft hier?
-4. Wie ghet's
-   4.1 Guten Abend, Fräulein Wagner! Wie geht's?
-   4.2 Das ist Herr Müller
-   4.3 Was trinken Sie?
-   4.4 Anne trinkt eine Limonade
-   4.5 Kommst du mit ins Café
-   4.6 Ich habe Durst. Und du?
-5. Am Telefon
-   5.1 Gutten Tag! Hier ist Fräulein Wagner.
-   5.2 Mein Name ist Wolfgang
-   5.3 Verzeihung, wer bist du?
-   5.4 Ich gehe jetzt nach Hause
-   5.5 Wo ist Peter? Er ist zu Hause
-   5.6 Meine Tochter ist noch klein
-6. Immer dasselbe...
-   6.1 Der Zug färht um sechs Uhr.
-   6.2 Wo ist meine Fahrkarte
-   6.3 Warte! Ich komme sofort!
-   6.4 Wir haben nur zehn Minuten Zeit
-   6.5 Mein Name ist Anne Müller
-   6.6 Dast ist immer dasselbe!
-7. Wiederholung und Erklärungen
-   7.1 alphabet
-   7.2 Trois genres articles indéfinis:
+1.  Café
+    1.1  Wie ist der Tee?
+    1.2  Er gut
+    1.3  Verzeihung Her Ober!
+    1.4  Die Tasse ist zu klein
+    1.5  Sie ist klein
+    1.6  Anne ist klein, aber Klaus ist gro*B
+2.  Das Restaurant
+    2.1  Ich bin gro*B
+    2.2  Sie sind klein
+    2.3  Ist das Restaurant teuer ?
+    2.4  Nein, es ist nicht teuer
+    2.5  Dort ist ein Café
+    2.6  Ich habe Hunger
+3.  Im Park
+    3.1  Sprechen Sie Französisht?
+    3.2  Nein, icht spreche nur Deutsh.
+    3.3  Ist Dieser Tee ist gut ?
+    3.4  Dieses Restaurant ist nicht teuer.
+    3.5  Ich spreche ein wenig Englisch
+    3.6  Sie sind oft hier?
+4.  Wie ghet's
+    4.1  Guten Abend, Fräulein Wagner! Wie geht's?
+    4.2  Das ist Herr Müller
+    4.3  Was trinken Sie?
+    4.4  Anne trinkt eine Limonade
+    4.5  Kommst du mit ins Café
+    4.6  Ich habe Durst. Und du?
+5.  Am Telefon
+    5.1  Gutten Tag! Hier ist Fräulein Wagner.
+    5.2  Mein Name ist Wolfgang
+    5.3  Verzeihung, wer bist du?
+    5.4  Ich gehe jetzt nach Hause
+    5.5  Wo ist Peter? Er ist zu Hause
+    5.6  Meine Tochter ist noch klein
+6.  Immer dasselbe...
+    6.1  Der Zug färht um sechs Uhr.
+    6.2  Wo ist meine Fahrkarte
+    6.3  Warte! Ich komme sofort!
+    6.4  Wir haben nur zehn Minuten Zeit
+    6.5  Mein Name ist Anne Müller
+    6.6  Dast ist immer dasselbe!
+7.  Wiederholung und Erklärungen
+    7.1  alphabet
+    7.2  Trois genres articles indéfinis:
           masculin : der
           féminin  : die
           neutre   : das
@@ -63,18 +63,25 @@ cf ASSIMIL learning book
        sie trinken
        Sie trinken (politesse)
 *******************************************************************************
-8. Ein Fest
-   8.1 Wer ist das? Ich wei*B nicht
-   8.2 Alle amüsieren sich und tanzen.
-   8.3 Ich glaube er ist ein Freund von Fräulein Schmitt.
-   8.4 Er kennt sie nicht.
-   8.5 Wissen Sie, warum er lacht?
-   8.6 Die kleine Frau dort ist mein Mutter.
-9. Ein Fest (Fortsetzung)
-   9.1 Mein Bruder ist gro*B und schlank.
-   9.2 Wie hei*Bt Ihre Schwester?
-   9.3 Darf ich mioch vorstellen?
-   9.4 Wir kennen niemand hier.
-   9.5 Sie gehen gern ins Kino.
-   9.6 Wie hei*Bt diese Frau? Ich wei*B nicht.
-
+8.  Ein Fest
+    8.1  Wer ist das? Ich wei*B nicht
+    8.2  Alle amüsieren sich und tanzen.
+    8.3  Ich glaube er ist ein Freund von Fräulein Schmitt.
+    8.4  Er kennt sie nicht.
+    8.5  Wissen Sie, warum er lacht?
+    8.6  Die kleine Frau dort ist mein Mutter.
+9.  Ein Fest (Fortsetzung)
+    9.1  Mein Bruder ist gro*B und schlank.
+    9.2  Wie hei*Bt Ihre Schwester?
+    9.3  Darf ich mioch vorstellen?
+    9.4  Wir kennen niemand hier.
+    9.5  Sie gehen gern ins Kino.
+    9.6  Wie hei*Bt diese Frau? Ich wei*B nicht.
+10. A faire
+11. Eine Begegnung
+    11.1 Woher kommst du? Ich komme aus Berlin.
+    11.2 Wo wohnen Sie? Ich wohne in Frankfurt.
+    11.3 Trinken Sie viel Bier? Nein, ich trinke nur Wein.
+    11.4 Ist das Ihr KindF? Nein, ich habe kein Kind.
+    11.5 Frau Pivot wohnt in Frankreich und Herr Johnson wohnt in England
+    11.6 Wie bitte? Ich verstehe nicht.
