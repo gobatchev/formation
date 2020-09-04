@@ -77,7 +77,13 @@ cf ASSIMIL learning book
     9.4  Wir kennen niemand hier.
     9.5  Sie gehen gern ins Kino.
     9.6  Wie hei*Bt diese Frau? Ich wei*B nicht.
-10. A faire
+10. Eine Überraschung
+    10.1 Hast du Zeit heute?
+    10.2 Seine Mutter ist kranr.
+    10.3 Ihre Schwester kommt morgen.
+    10.4 Sein Freund trinkt gern viel.
+    10.5 Ihr Bruder tantzt gern.
+    10.6 Vielleicht hat ihr Mann auch Zeit?
 11. Eine Begegnung
     11.1 Woher kommst du? Ich komme aus Berlin.
     11.2 Wo wohnen Sie? Ich wohne in Frankfurt.
