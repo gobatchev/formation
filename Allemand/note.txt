@@ -91,3 +91,10 @@ cf ASSIMIL learning book
     11.4 Ist das Ihr KindF? Nein, ich habe kein Kind.
     11.5 Frau Pivot wohnt in Frankreich und Herr Johnson wohnt in England
     11.6 Wie bitte? Ich verstehe nicht.
+12. Wenn das Wetter shöne ist...
+    12.1 Woher kommen Sie?
+    12.2 Wo wohnen Sie ?
+    12.3 Wohin gehen Sie?
+    12.4 Wie ist Ihr Name?
+    12.5 Wer ist das?
+    12.6 Was ist das?
