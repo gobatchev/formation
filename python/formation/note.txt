@@ -405,6 +405,35 @@ C. Programmation Orientée Objet côté développeur
             module operator pour avoir itemgetter et attrgetter
             le tri en python est stable --> chainage de tri possible
 
+    5. Gérez les héritages
+        L'héritage simple
+            class MaClasse(MaClasseMere)
+            Cherche d'abord la méthode dans la class enfant puis dans classe mère
+                Permet de redéfinir méthode
+            issubclass
+                vérifier si c'est une classe mère
+            isinstance
+                vérifier si c'est une classe fille
+        L'héritage multiple
+            class MaClasseHeritee(MaClasseMere1, MaClasseMere2):
+                On cherche la méthode dans MaClasseHeritee>>MaClasseMere1>>MaClasseMere2
+        Retour sur les exceptions
+            except TypeException
+                Pour intercepter les exceptions
+                    du type TypeException
+                    héritées de TypeException.
+            Création d'exceptions personnalisées
+                les lever avec raise,
+                les intercepter avec except
 
-
-
+                Se positionner dans la hiérarchie
+                    BaseException : la classe mère de toutes les exceptions.
+                    Exception : c'est de cette classe que vos exceptions hériteront la plupart du temps.
+                        C'est la classe mère de toutes les exceptions « d'erreurs ».
+        SumUp
+            L'héritage permet à une classe d'hériter du comportement d'une autre en reprenant ses méthodes.
+            La syntaxe de l'héritage est class NouvelleClasse(ClasseMere):.
+            Accéder aux méthodes de la classe mère directement via la syntaxe : ClasseMere.methode(self).
+            L'héritage multiple permet à une classe d'hériter de plusieurs classes mères.
+                class NouvelleClasse(ClasseMere1, ClasseMere2, ClasseMereN):.
+            Les exceptions définies par Python sont ordonnées selon une hiérarchie d'héritage.
