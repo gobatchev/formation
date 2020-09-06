@@ -97,4 +97,10 @@ cf ASSIMIL learning book
     12.3 Wohin gehen Sie?
     12.4 Wie ist Ihr Name?
     12.5 Wer ist das?
-    12.6 Was ist das?
+    12.6 Waist das?
+13. Ich kann es versuchen
+    13.1 Er lernt Deutsh.
+    13.2 Er arbeiten will in Deutschland arbeiten.
+    13.3 Die Arbeit beginnt in veir Monaten.
+    13.4 Ja, er spricht English.
+    13.5 Ja, ich spreche ein bi*Bechen Deutsch.
