@@ -105,4 +105,10 @@ cf ASSIMIL learning book
     13.4 Ja, er spricht English.
     13.5 Ja, ich spreche ein bi*Bechen Deutsch.
 14. Wiederholung und Erklärungen
-15.
+15. Ich habe ein freund...
+    15.1 Sie trinkt eine Limondaden und er trinkt einen Whisky.
+    15.2 Komm, gehen wir nach Hause.
+    15.3 Iche bleide lieber hier.
+    15.4 Wir müssen morgen arbeiten.
+    15.5 Warum sind Sie deprimiert?
+    15.6 Er bleibt immer zwei oder drei Studen.
