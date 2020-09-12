@@ -448,4 +448,13 @@ C. Programmation Orientée Objet côté développeur
             yield
             Les générateurs permettent de créer plus simplement des itérateurs.
     7. TP dictionnaire ordonné
-
+    8. Les décorateurs
+        Kezako
+            fonctions python pour modifier comportement par défaut de fonctions ou classes.
+        Théorie
+            <code> @nom_du_decorateur
+            <code> def ma_fonction(...)
+            Les décorateurs permettent de modifier le comportement d'une fonction.
+            Ce sont des fonctions, prenant en paramètre une fonction et renvoyant une fonction
+            Le décorateur est appelé et la fonction qu'il renvoie sera utilisée.
+            Les décorateurs peuvent prendre des paramètres pour influer le comportement de la fonction.
