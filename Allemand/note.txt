@@ -119,3 +119,10 @@ cf ASSIMIL learning book
     16.4 Wir nehmen den Wagen. Das ist besser
     16.5 Alle Leute brauchen Geld.
     16.6 Es ist Mitternacht. Die Geister kommen.
+17. Der Zahnarzt
+    17.1 Haben Sie Kopfschmerzen?
+    17.2 Mein Arzt ist sehr nett.
+    17.3 Ich kenne ihn seit fünf Jahren.
+    17.4 Kennen Sie meinen Mann?
+    17.5 Leider jenne ich Ihren Bruder nicht.
+    17.6 Können Sie mir bit Ihre Telefonnummer geben?
