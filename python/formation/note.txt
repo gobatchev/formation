@@ -458,3 +458,24 @@ C. Programmation Orientée Objet côté développeur
             Ce sont des fonctions, prenant en paramètre une fonction et renvoyant une fonction
             Le décorateur est appelé et la fonction qu'il renvoie sera utilisée.
             Les décorateurs peuvent prendre des paramètres pour influer le comportement de la fonction.
+    9. Les méthaclasses
+        Générer classes à partir d'autres classes
+        Processus d'instanciation
+            la méthode __new__
+                créer l'objet
+        Créer une classe dynamiquement
+        Définition d'une métaclasse
+        Le processus d'instanciation d'un objet :
+            __new__
+            __init__
+        __new__
+            création de l'objet
+            prend en premier paramètre sa classe.
+        __init__
+            initialisation des attributs de l'objet
+            prend en premier paramètre l'objet précédemment créé par __new__
+        Les classes sont toutes modelées sur une classe appelée métaclasse.
+        la métaclasse de toutes les classes est type.
+        type pour créer des classes dynamiquement.
+        hériter une classe de type pour créer une nouvelle métaclasse.
+        class MaClasse(metaclass=NomDeLaMetaClasse):
