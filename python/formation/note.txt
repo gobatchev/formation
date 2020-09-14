@@ -479,3 +479,81 @@ C. Programmation Orientée Objet côté développeur
         type pour créer des classes dynamiquement.
         hériter une classe de type pour créer une nouvelle métaclasse.
         class MaClasse(metaclass=NomDeLaMetaClasse):
+
+
+D. Appréhendez les merveilles de la bibliothèque standard
+    1. Les regex
+        module re
+            fonction search
+            compiler les expressions régulières grâce à compile
+    2. Exprimez le temps
+        module time
+        Epoch Linux -> 01/01/1970 à 00:00:00
+        time.time() en seconde
+        time.localtime()
+        Mettre en pause l'exécution du programme
+            time.sleep(tps en seconde)
+        formatage
+            time.strftime('%Y')
+            symbole
+                %A - Nom du jour de la semaine
+                %B - Nom du mois
+                %d - Jour du mois (de 01 à 31)
+                %H - Heure (de 00 à 23)
+                %M - Minute (entre 00 et 59)
+                %S - Seconde (de 00 à 59)
+                %Y - Année
+    3. programmation système
+        Les flux standard
+            entrée standard
+                stdin
+            les deux sorties
+                stdout
+                stderr
+        Les signaux
+            Intercepter un signal
+                import signal
+                signal.SIGINT
+        arguments de la ligne de commande
+            os.system("ls")
+    4. modules de mathématiques
+        module math
+        pseudo-aléatoire avec random
+            import random
+            random.random()
+            random.choice(['a', 'b', 'k', 'p', 'i', 'w', 'z'])
+    5. Gérez les mots de passe
+        Réceptionner un mot de passe
+            module getpass
+                fonctionne comme imput mais plus secure
+        Chiffrer un mot de passe
+            module hashlib
+                éviter les collisions
+                >>> hashlib.algorithms_guaranteed
+                {'sha1', 'sha224', 'sha384', 'sha256', 'sha512', 'md5'}
+    6. Gérez les réseaux
+        présentation du réseau
+            Le protocole TCP
+                Transmition Control Protocol
+                Regarde si le message a bien été réceptioné par destinataire
+            UDP
+                Ne regarde pas si message receptionnné
+            Client et serveur
+                Le serveur :
+                    attend une connexion de la part du client ;
+                    accepte la connexion quand le client se connecte ;
+                    échange des informations avec le client ;
+                    ferme la connexion.
+                Le client :
+                    se connecte au serveur ;
+                    échange des informations avec le serveur ;
+                    ferme la connexion.
+            Les sockets
+                import socket
+            Dans la structure réseau que nous avons vue, on trouve un serveur pouvant dialoguer avec plusieurs clients.
+    Pour créer une connexion côté serveur ou client, on utilise le module socket et la classe socket de ce module.
+    Pour se connecter à un serveur, le socket client utilise la méthode connect.
+    Pour écouter sur un port précis, le serveur utilise d'abord la méthode bind puis la méthode listen.
+    Pour s'échanger des informations, les sockets client et serveur utilisent les méthodes send et recv.
+    Pour fermer une connexion, le socket serveur ou client utilise la méthode close.
+    Le module select peut être utile si l'on souhaite créer un serveur pouvant gérer plusieurs connexions simultanément ; toutefois, il en existe d'autres.
