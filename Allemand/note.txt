@@ -133,3 +133,10 @@ cf ASSIMIL learning book
     18.4 Sie ist wirklich sehr nett.
     18.5 Meine Mutter kommt sofort zurück.
     18.6 Der Supermarket ist von neun Uhr bis achtzehn Uhr geöffnet.
+19. Mögen Sie Würstchun?
+    19.1 Er i*Bt sein Würstchen ohne Senf
+    19.2 Magst du deinen Chef gern?
+    19.3 Heute mittag gehe ich in die Kantine
+    19.4 Trinkst du den Kaffee mit Zucker?
+    19.5 Dast ist eine gute Idee
+    19.6 Willst du keinen Kartoffelsalat?
