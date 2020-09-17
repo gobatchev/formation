@@ -550,10 +550,49 @@ D. Appréhendez les merveilles de la bibliothèque standard
                     ferme la connexion.
             Les sockets
                 import socket
-            Dans la structure réseau que nous avons vue, on trouve un serveur pouvant dialoguer avec plusieurs clients.
-    Pour créer une connexion côté serveur ou client, on utilise le module socket et la classe socket de ce module.
-    Pour se connecter à un serveur, le socket client utilise la méthode connect.
-    Pour écouter sur un port précis, le serveur utilise d'abord la méthode bind puis la méthode listen.
-    Pour s'échanger des informations, les sockets client et serveur utilisent les méthodes send et recv.
-    Pour fermer une connexion, le socket serveur ou client utilise la méthode close.
-    Le module select peut être utile si l'on souhaite créer un serveur pouvant gérer plusieurs connexions simultanément ; toutefois, il en existe d'autres.
+            un serveur pouvant dialoguer avec plusieurs clients.
+            Pour créer une connexion côté serveur ou client
+                module socket
+                classe socket de ce module.
+            Pour se connecter à un serveur
+                socket client utilise la méthode connect.
+            Pour écouter sur un port précis
+                la méthode bind puis la méthode listen.
+            Pour s'échanger des informations
+                méthodes send et recv.
+            Pour fermer une connexion
+                le socket serveur
+                client utilise la méthode close.
+            Le module select
+                créer un serveur ac plusieurs connexions simultanément
+
+    7. Créez des tests unitaires avec unittest
+        Premiers exemples de tests unitaires
+            module unittest
+            Tester une fonctionnalité existante
+                random.choice
+                random.shuffle
+                random.sample
+            Structure de base d'un test unitaire
+                class RandomTest(unittest.TestCase):
+                assertEqual(a, b) --> a == b
+                assertNotEqual(a, b) --> a != b
+                assertTrue(x) --> x is True
+                assertFalse(x) --> x is False
+                assertIs(a, b) --> a is b
+                assertIsNot(a, b) --> a is not b
+                assertIsNone(x) --> x is None
+                assertIsNotNone(x) --> x is not None
+                assertIn(a, b) --> a in b
+                assertNotIn(a, b) --> a not in b
+                assertIsInstance(a, b) --> isinstance(a, b)
+                assertNotIsInstance(a, b) --> not isinstance(a, b)
+                assertRaises(exception, fonction, *args, **kwargs) --> Vérifie que la fonction lève l'exception attendue.
+            La découverte automatique des tests
+            SumUp
+                les tests unitaires sont supportés par le module unittest ;
+                pour créer un test unitaire
+                    créer une classe qui hérite de unittest.TestCase.
+                Les méthodes de test ont un nom commençant par test ;
+                La commande python -m unittest
+                    permet la découverte automatique des tests
