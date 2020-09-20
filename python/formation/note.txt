@@ -596,3 +596,32 @@ D. Appréhendez les merveilles de la bibliothèque standard
                 Les méthodes de test ont un nom commençant par test ;
                 La commande python -m unittest
                     permet la découverte automatique des tests
+
+    8. Threading
+        créer une classe qui hérite de threading
+            - crée nos deux threads.
+            - thread_1.start().
+                va créer un thread et exécuter la méthode run.
+                2nd thread est également lancé.
+                Les deux threads s'exécutent en même temps ;
+                Enfin, on appelle la méthode join()sur les deux threads
+                    Cette méthode bloque
+                    Et ne retourne que quand le thread est terminé.
+        La synchronisation des threads
+            opérations concurrentes
+            Accès simultané à des ressources
+                Les locks à la rescousse
+                    synchro les thread
+                        Rlook du module threading
+                        utilise context manager
+                            savoir qd lock
+                            qd unlock
+        SumUp
+            plusieurs mécanismes de programmation parallèle
+                dont les threads
+                    module threading
+            Créer un thread
+                redéfinissant une classe héritée de threading Thread
+                Et en appelant sa méthode start ;
+            On peut utiliser les locks pour synchroniser nos threads
+                pour que le code s'exécutent bien à la suite des autres.
