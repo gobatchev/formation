@@ -140,3 +140,10 @@ cf ASSIMIL learning book
     19.4 Trinkst du den Kaffee mit Zucker?
     19.5 Dast ist eine gute Idee
     19.6 Willst du keinen Kartoffelsalat?
+20. Wo ist der Bahnhof?
+    20.1 Entschuldigen, Sie, wissen Sie,wieviel Uhr es ist?
+    20.2 Ich möchte bitte eine Doppelzimmer für eine Nacht.
+    20.3 Können Sie mir sagen wo ein Hotel ist?
+    20.4 Die erste Stra*Be links un dann immer geradeaus.
+    20.5 Guten Abend! Haben Sie ein Zimmer frei?
+    20.6 Waarten Sie! Wir kommen gleich!
