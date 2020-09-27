@@ -146,4 +146,27 @@ cf ASSIMIL learning book
     20.3 Können Sie mir sagen wo ein Hotel ist?
     20.4 Die erste Stra*Be links un dann immer geradeaus.
     20.5 Guten Abend! Haben Sie ein Zimmer frei?
-    20.6 Waarten Sie! Wir kommen gleich!
+    20.6 Warten Sie! Wir kommen gleich!
+21. Wiederholung und Erklarungen
+    Accusatif
+        Seul le masculin change
+            der --> den
+            ein --> einen
+        verbes de modalité
+            müssen --> falloir
+            sollen --> devoir
+            wollen --> vouloir
+            können --> pouvoir
+            dürfen --> avoir le droit / pouvoir
+            La 3ème personne du sing du présent ne se termine pas par -t
+            l'infinitif qui suit le verbe est rejeté à la fin de la phrase.
+            0 null   - 10 zehn
+            1 eins   - 11 elf
+            2 zwei   - 12 zwölf
+            3 drei   - 13 dreizehn
+            4 vier   - 14 vierzehn
+            5 fünf   - 15 fünfzehn
+            6 sechs  - 16 sechzehn
+            7 sieben - 17 siebzehn
+            8 acht   - 18 achtzehn
+            9 neun   - 19 neunzehn
