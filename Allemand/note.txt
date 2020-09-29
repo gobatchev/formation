@@ -170,3 +170,10 @@ cf ASSIMIL learning book
             7 sieben - 17 siebzehn
             8 acht   - 18 achtzehn
             9 neun   - 19 neunzehn
+22. Eine schöne Wohnung
+    22.1 Gefällt Ihnen mein Wagen?
+    22.2 Er zeigt seinem Bruder seinem Fotoappart
+    22.3 Geben Sie mir bitte ein Kilo Tomaten!
+    22.4 Nein, das pa*Bt mir nicht
+    22.5 Ich hasse Lärm unf Hunde
+    22.6 Deine Fotos gefallen ihnen sehr gut.
