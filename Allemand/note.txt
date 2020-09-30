@@ -177,3 +177,10 @@ cf ASSIMIL learning book
     22.4 Nein, das pa*Bt mir nicht
     22.5 Ich hasse Lärm unf Hunde
     22.6 Deine Fotos gefallen ihnen sehr gut.
+23. Schwierige Gäste
+    23.1 Anne zeigt Ihrer Tante und Ihrem Obkel die Altstadt.
+    23.2 Der Kaffe ist für mich und der Tee ist für dich.
+    23.3 Am Donnerstag gehe ich mit ihnen in die Stadt
+    23.4 Sagen Sie, gefällt Ihnen mein neur Wagen?
+    23.5 Habt ihr morgen Zeit? Ich kann euch morgen treffen.
+    23.6 Die Geschäfte sind sonntags geschlossen.
