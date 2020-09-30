@@ -625,3 +625,5 @@ D. Appréhendez les merveilles de la bibliothèque standard
                 Et en appelant sa méthode start ;
             On peut utiliser les locks pour synchroniser nos threads
                 pour que le code s'exécutent bien à la suite des autres.
+    9. Interfaces graphiques avec Tkinter
+    10. cx_Freeze pour exporter les python en executable
