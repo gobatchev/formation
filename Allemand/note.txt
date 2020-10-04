@@ -184,3 +184,11 @@ cf ASSIMIL learning book
     23.4 Sagen Sie, gefällt Ihnen mein neur Wagen?
     23.5 Habt ihr morgen Zeit? Ich kann euch morgen treffen.
     23.6 Die Geschäfte sind sonntags geschlossen.
+24. Vertehen Sie das?
+    24.1 Wann fährt der Zug nach Berlin ab?
+    24.2 Wann kommt er in Berlin an?
+    24.3 Mu*B ich umsteigen?
+    24.4 Wohin wollen Sie fahren?
+    24.5 Wann wollen Sie fahren?
+    24.6 Fahren Sie allein?
+    24.7 Um wieviel Uhr kommen Sie zurück?
