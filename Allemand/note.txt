@@ -192,3 +192,11 @@ cf ASSIMIL learning book
     24.5 Wann wollen Sie fahren?
     24.6 Fahren Sie allein?
     24.7 Um wieviel Uhr kommen Sie zurück?
+25.
+    25.1 Heute ist Donnerstag der zehnte Oktober.
+    25.2 Di Frau meines Bruders ist meine Schwägerin.
+    25.3 Der Mann meiner Schwester ist mein Schwager.
+    25.4 Dein Vater ist ein shöner Mann.
+    25.5 Wir reservieren einen Tisch im Restaurant.
+    25.6 Nein Schatz zieh dich schnell an; ich warte schon eine Stunde!
+    25.7
