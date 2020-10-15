@@ -23,7 +23,7 @@ cf ASSIMIL learning book
     3.4  Dieses Restaurant ist nicht teuer.
     3.5  Ich spreche ein wenig Englisch
     3.6  Sie sind oft hier?
-4.  Wie ghet's
+4.  Wie ghet' s
     4.1  Guten Abend, Fräulein Wagner! Wie geht's?
     4.2  Das ist Herr Müller
     4.3  Was trinken Sie?
@@ -203,6 +203,13 @@ cf ASSIMIL learning book
     26.1 Wem gehören diese Bücher? Sie gehören den Kindern.
     26.2 Dort steht der Hausmeister. Wir fragen ihn.
     26.3 Meine Mutter hat viel Arbeit. Wir helfen ihr.
-    26.4 !!!!!!der alte Mann sitzt auf der Bank und schäft.
+    26.4 Der alte Mann sitzt auf der Bank und schäft.
     26.5 Wo stehen die Weinflaschen? In der Küche.
     26.6 Wo liegen die Zeitungen? Auf del Tisch.
+27. Wer soll das bezahlen?
+    27.1 Bringen Sie mir bitte die Rechnung!
+    27.2 Er hat kein Auto? Das ist gibt's nicht!
+    27.3 Ich möchte Champagner! Unmoglich Wer soll denn das bezahlen !
+    27.4 Das macht 18.60 DM. Hier 20 DM. Stimmt so, danke!
+    27.5 Zahlen Sie alles zusammen ?
+    27.6 Darf ich noch ein Stück Kuchen essen?
