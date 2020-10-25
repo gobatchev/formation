@@ -227,3 +227,10 @@ cf ASSIMIL learning book
     29.4 Sie können soviel essen wie Sie wollen !
     29.5 Mein Bruder ist 18 Jahre alt und ich bin 14.
     29.6 Ich hoffe, da*B ich eine schnelle Antwort.
+30. Ein ruhiger Nachmittag im Hotel
+    30.1 Hast du Lust, mit mir nach Deutshland zu fahren?
+    30.2 Komm ! Das Wetter ist so schön. Wir gehen an die Alster
+    30.3 Kommt nich in Frage ! Erstens habe nicht keine Zeit und Zweitens keine Lust!
+    30.4 Er ist Musiker. Er Zieht oft um
+    30.5 Ich möchte dir eine Freude machen. Was kann ich für dich tun?
+    30.6 Wir brauchen viel Geld, um gut zu leben.
