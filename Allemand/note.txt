@@ -234,3 +234,24 @@ cf ASSIMIL learning book
     30.4 Er ist Musiker. Er Zieht oft um
     30.5 Ich möchte dir eine Freude machen. Was kann ich für dich tun?
     30.6 Wir brauchen viel Geld, um gut zu leben.
+31. Ein Gespräch mit dem Chef
+    31.1 Er hatte seit zwei Jahren Erhöhung.
+    31.2 Zum Personalchef.
+    31.3 Ja, er war schon bei ihm.
+    31.4 Zwei Kollegen.
+    31.5 Der Betriebstrat.
+    31.6 An Frl Dickmann.
+32. Ein Interview
+    32.1 Ich kann den Film ansehen, wenn er nich zu lange dauert.
+    32.2 Ist Ihr Vater älter als mein Vater?
+    32.3 Ich glaube, er ist so alt wie ich.
+    32.4 Mögen Sie lieber Würstchen oder Schzeinekoteletts?
+    32.5 Mein neues Auto fährt langsamer als mein altes; aber bremst genau so gut wie mein altes.
+    32.6 Wohnen Sie lieber auf dem Land oder in der achtundzanzigsten Etage im Stadtzentrum?
+33. Ein sympathisher Besuch
+    33.1 Der shönste Man den ich kenne, ist mein Vater.
+    33.2 Die Kuchen bei Mülers sind die besten
+    33.3 Die intelligenteste Frau in der Stadt ist meine Freundin.
+    33.4 Ich freue sehr, Sie zu sehen. Kommen Sie doch bitte mich!
+    33.5 Was ist Ihr schönstes Souvenirs?
+    33.6 Sind Sie immer pünklich oder kommen Sir oft zu spät?
