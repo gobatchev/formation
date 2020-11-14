@@ -255,3 +255,10 @@ cf ASSIMIL learning book
     33.4 Ich freue sehr, Sie zu sehen. Kommen Sie doch bitte mich!
     33.5 Was ist Ihr schönstes Souvenirs?
     33.6 Sind Sie immer pünklich oder kommen Sir oft zu spät?
+34. Beim "Fondue" -Essen
+    34.1 Was essen Sie am liebsten?
+    34.2 Ich finde den Artikel in fer Süddeutschen Zeiung am besten. Er ist am interessantesten.
+    34.3 Beim Essen soll man nicht sprechen.
+    34.4 Brauchen Sie eine Brille zum Lessen?
+    34.5 Was für Bücher liest du am liebsten.
+    34.6 Schenken Sie mir bitte noch etwas Wein nach.
