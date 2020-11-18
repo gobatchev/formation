@@ -262,3 +262,63 @@ cf ASSIMIL learning book
     34.4 Brauchen Sie eine Brille zum Lessen?
     34.5 Was für Bücher liest du am liebsten.
     34.6 Schenken Sie mir bitte noch etwas Wein nach.
+35. Wiederholung und Erklärungen
+    35.1 Déclinaison
+        a) déclinaison de l'adjectif après l'article défini:
+            masculin
+                nom.: der grüne Tish
+                acc.: den grünen Tish
+                dat.: dem grünen Tish
+                gén.: des grünen Tishs
+            féminin
+                nom.: die kleine Tasse
+                acc.: die kleine Tasse
+                dat.: der kleinen Tasse
+                gén.: der kleinen Tasse
+            neutre
+                nom.: das liebe Kind
+                acc.: das liebe Kind
+                dat.: dem lieben Kind
+                gén.: des lieben Kinds
+            pluriel
+                nom.: die alten Freuden
+                acc.: die alten Freunde
+                dat.: den alten Freunden
+                gén.: der alten Freunde
+        b) déclinaison après l'article indéfini
+            masculin
+                nom.: ein neuer Hut
+                acc.: einen neuen Hut
+                dat.: einem neuen Hut
+                gén.: eines neuen Hut
+            féminin
+                nom.: eine blaue Tasche
+                acc.: eine blaue Tasche
+                dat.: einem blauem Tasche
+                gén.: einer blauen Tasche
+            neutre
+                nom.: ein gro*Bes Haus
+                acc.: ein gro*Bes Haus
+                dat.: einem gro*Ben Haus
+                gén.: eines gro*Ben Hauses
+        c) déclinaison de l'adjectif sans article
+            masculin
+                nom.: guter Wein
+                acc.: guten Wein
+                dat.: gutem Wein
+                gén.: guten Weins
+            féminin
+                nom.: deutsche Küche
+                acc.: deutsche Küche
+                dat.: deutscher Küche
+                gén.: deutscher Küche
+            neutre
+                nom.: kaltes Wasser
+                acc.: kaltes Wasser
+                dat.: katltem Wasser
+                gén.: kalten Wassers
+            pluriel
+                nom.: schöne Ferien
+                acc.: schöne Ferien
+                dat.: schönen Ferien
+                gén.: schöner Ferien
