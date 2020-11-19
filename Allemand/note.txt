@@ -322,3 +322,28 @@ cf ASSIMIL learning book
                 acc.: schöne Ferien
                 dat.: schönen Ferien
                 gén.: schöner Ferien
+    35.2 comparatif et le superlatif
+        a) comparatif
+            mettre -er à l'adjectif : shön --> shöner
+            si une syllabe mettre ä, ö, ü : alt --> älter
+        b) superlatif
+            am + ajouter -ste à l'adjectif alt --> älteste et gro*B --> grö*Bten
+            l'adverbe au superlatif --> am kleinsten
+        c) la comparaison
+            Mein Bruder ist kleiner als ich --> Mon frère est plus petit que moi. QUE est traduis par ALS
+            Mein Bruder ist so gro*B wie ich --> Mon frère est aussi grand que moi. QUE est traduit par WIE car c'est une ÉGALITÉ
+            Quand adjéctif est épythète, il se décline.
+    35.3 Mois de la semaine
+        Januar
+        Februar
+        März
+        April
+        Mai
+        Juni
+        Juli
+        August
+        September
+        Oktober
+        November
+        Dezember
+
