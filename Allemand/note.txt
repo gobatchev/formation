@@ -1,5 +1,5 @@
 *******************************************************************************
-Learn Deutsch
+*                                Learn Deutsch
 *******************************************************************************
 cf ASSIMIL learning book
 1.  Café
@@ -353,4 +353,11 @@ cf ASSIMIL learning book
     36.4 Die Telefonrechnung war un diesem Monat sehr hoch.
     36.5 Was hast du am Wochenende germacht?
     36.6 Ich habe mit meiner Freundin telefoniert.
+37. Ein guter Tip
+    37.1 Wohin fahren Sie in diesem Sommer?
+    37.2 Wir fahren auch dorthin.
+    37.3 Woher kommt ihre Frau? Aus Müchen.
+    37.4 Ich komme auch dorther.
+    37.5 Sie müssen undebingt diesen Film sehen. Er ist  herrlich.
+    37.6 Fragen Sie nach Herrn Hansen. Er ist ein guter Freund von mir.
 
