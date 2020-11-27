@@ -360,4 +360,10 @@ cf ASSIMIL learning book
     37.4 Ich komme auch dorther.
     37.5 Sie müssen undebingt diesen Film sehen. Er ist  herrlich.
     37.6 Fragen Sie nach Herrn Hansen. Er ist ein guter Freund von mir.
-
+38. Ein Ausweg?
+    38.1 Wir müssen hier anhalten Ich wei*B nicht mehr wo wir sind.
+    38.2 Ich sehe keinen Wegweiser Wir müssen nach dem Weg fragen.
+    38.3 Was ist los? Warun wird es so dunkel?
+    38.4 Sie kennen doch diese Stadt! Das haben Sir mir jedenfalls gesagt!
+    38.5 Heute sieht alles ganz anders aus.
+    38.6 Er glaubt er hat sich verirrt.
